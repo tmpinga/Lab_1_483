@@ -1,0 +1,57 @@
+\hypertarget{main_8c}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/main.c File Reference}
+\label{main_8c}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/main.\-c@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/main.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$asf.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Free\-R\-T\-O\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}partest.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a74ad86ee71abcddfb786048b51deb510}{led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~( \hyperlink{task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\-I\-D\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y} + 1 )
+\item 
+\#define \hyperlink{main_8c_ab1e2986d99199637854117c6efe881c9}{led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E}~( 4 )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a41f98f48a047281a612f721bdf972098}{v\-Flash\-Led500ms} (void $\ast$blinktime)
+\item 
+void \hyperlink{main_8c_a8ab590b7350a7c9b27bb54ceb990bb33}{v\-Start\-Blink} (void)
+\item 
+int \hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_ab1e2986d99199637854117c6efe881c9}{\index{main.\-c@{main.\-c}!led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E@{led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E}}
+\index{led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E@{led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E}!main.c@{main.\-c}}
+\subsubsection[{led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define led\-\_\-test500\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-\_\-\-T\-O\-G\-G\-L\-E~( 4 )}}\label{main_8c_ab1e2986d99199637854117c6efe881c9}
+\hypertarget{main_8c_a74ad86ee71abcddfb786048b51deb510}{\index{main.\-c@{main.\-c}!led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!main.c@{main.\-c}}
+\subsubsection[{led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define led\-\_\-test\-L\-E\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~( {\bf tsk\-I\-D\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y} + 1 )}}\label{main_8c_a74ad86ee71abcddfb786048b51deb510}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\-c@{main.\-c}!main@{main}}
+\index{main@{main}!main.c@{main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{main_8c_a41f98f48a047281a612f721bdf972098}{\index{main.\-c@{main.\-c}!v\-Flash\-Led500ms@{v\-Flash\-Led500ms}}
+\index{v\-Flash\-Led500ms@{v\-Flash\-Led500ms}!main.c@{main.\-c}}
+\subsubsection[{v\-Flash\-Led500ms}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Flash\-Led500ms (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{blinktime}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a41f98f48a047281a612f721bdf972098}
+\hypertarget{main_8c_a8ab590b7350a7c9b27bb54ceb990bb33}{\index{main.\-c@{main.\-c}!v\-Start\-Blink@{v\-Start\-Blink}}
+\index{v\-Start\-Blink@{v\-Start\-Blink}!main.c@{main.\-c}}
+\subsubsection[{v\-Start\-Blink}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Start\-Blink (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a8ab590b7350a7c9b27bb54ceb990bb33}

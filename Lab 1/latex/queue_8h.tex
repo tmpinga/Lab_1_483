@@ -1,0 +1,451 @@
+\hypertarget{queue_8h}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/queue.h File Reference}
+\label{queue_8h}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/queue.\-h@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/queue.\-h}}
+}
+{\ttfamily \#include \char`\"{}mpu\-\_\-wrappers.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K}~( 0 )
+\item 
+\#define \hyperlink{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T}~( 1 )
+\item 
+\#define \hyperlink{queue_8h_a3f926bea6ffa4e2f1af900431d0d90a5}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E}~( 0\-U )
+\item 
+\#define \hyperlink{queue_8h_ae9c10f504e758fb69271024dc8d8a8c9}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X}~( 1\-U )
+\item 
+\#define \hyperlink{queue_8h_abccf1c95aa0942f8df163d414010542b}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}~( 2\-U )
+\item 
+\#define \hyperlink{queue_8h_a8af9c6a83fce59c386da4f22248b56ae}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}~( 3\-U )
+\item 
+\#define \hyperlink{queue_8h_a6f68aa65394f83b57e34061d9ff44b47}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X}~( 4\-U )
+\item 
+\#define \hyperlink{queue_8h_aeb858b824bd74a934ea7ebb81af2a6bb}{x\-Queue\-Create}(ux\-Queue\-Length, ux\-Item\-Size)~\hyperlink{queue_8h_a3dc667a7811e292f92ea700da2a54565}{x\-Queue\-Generic\-Create}( ux\-Queue\-Length, ux\-Item\-Size, \hyperlink{queue_8h_a3f926bea6ffa4e2f1af900431d0d90a5}{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E} )
+\item 
+\#define \hyperlink{queue_8h_aa612fcc2b1ceee0200f34b942e300b41}{x\-Queue\-Send\-To\-Front}(x\-Queue, pv\-Item\-To\-Queue, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}{x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), \hyperlink{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )
+\item 
+\#define \hyperlink{queue_8h_a81d24a2c1199d58efb76fbee15853112}{x\-Queue\-Send\-To\-Back}(x\-Queue, pv\-Item\-To\-Queue, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}{x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )
+\item 
+\#define \hyperlink{queue_8h_af7eb49d3249351176992950d9185abe9}{x\-Queue\-Send}(x\-Queue, pv\-Item\-To\-Queue, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}{x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )
+\item 
+\#define \hyperlink{queue_8h_a2df70733bb875477cd9614c5b3446257}{x\-Queue\-Peek}(x\-Queue, pv\-Buffer, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_ab6c30bf884a19b31acb4158d04c9c3f0}{x\-Queue\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), \hyperlink{projdefs_8h_af268cf937960eb029256bd9c4d949fbe}{pd\-T\-R\-U\-E} )
+\item 
+\#define \hyperlink{queue_8h_af1549eac0e7f05694a59a0b967c80be3}{x\-Queue\-Receive}(x\-Queue, pv\-Buffer, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_ab6c30bf884a19b31acb4158d04c9c3f0}{x\-Queue\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\-F\-A\-L\-S\-E} )
+\item 
+\#define \hyperlink{queue_8h_a849dd669e72bfb12314f4445157c9a04}{x\-Queue\-Send\-To\-Front\-From\-I\-S\-R}(px\-Queue, pv\-Item\-To\-Queue, px\-Higher\-Priority\-Task\-Woken)~\hyperlink{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}{x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), \hyperlink{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )
+\item 
+\#define \hyperlink{queue_8h_a5a4b46fc55ab9f63b89878b37352f521}{x\-Queue\-Send\-To\-Back\-From\-I\-S\-R}(px\-Queue, pv\-Item\-To\-Queue, px\-Higher\-Priority\-Task\-Woken)~\hyperlink{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}{x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )
+\item 
+\#define \hyperlink{queue_8h_a2e8236e9af01eedcbc8b67a9cb56b1db}{x\-Queue\-Send\-From\-I\-S\-R}(px\-Queue, pv\-Item\-To\-Queue, px\-Higher\-Priority\-Task\-Woken)~\hyperlink{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}{x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )
+\item 
+\#define \hyperlink{queue_8h_ae45934bb36e02340278a65cf238b9083}{x\-Queue\-Alt\-Send\-To\-Front}(x\-Queue, pv\-Item\-To\-Queue, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_aa9bff76f92251533d45348165c082de7}{x\-Queue\-Alt\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), \hyperlink{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )
+\item 
+\#define \hyperlink{queue_8h_a2e290abdf4d43a7142be16bda4279f68}{x\-Queue\-Alt\-Send\-To\-Back}(x\-Queue, pv\-Item\-To\-Queue, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_aa9bff76f92251533d45348165c082de7}{x\-Queue\-Alt\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), \hyperlink{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )
+\item 
+\#define \hyperlink{queue_8h_a4f50206223e1f88f458a3aea4131608d}{x\-Queue\-Alt\-Receive}(x\-Queue, pv\-Buffer, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_adf2034938c08ce4ac68edf290e2d6971}{x\-Queue\-Alt\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\-F\-A\-L\-S\-E} )
+\item 
+\#define \hyperlink{queue_8h_af6c605882aa8f9133dc2e98a02f55e62}{x\-Queue\-Alt\-Peek}(x\-Queue, pv\-Buffer, x\-Ticks\-To\-Wait)~\hyperlink{queue_8h_adf2034938c08ce4ac68edf290e2d6971}{x\-Queue\-Alt\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), \hyperlink{projdefs_8h_af268cf937960eb029256bd9c4d949fbe}{pd\-T\-R\-U\-E} )
+\item 
+\#define \hyperlink{queue_8h_a808640f7a13dccf68521cc1697cc37bb}{x\-Queue\-Reset}(px\-Queue)~\hyperlink{queue_8h_a56f2646c3ccee7d804a78b9d01592a8b}{x\-Queue\-Generic\-Reset}( px\-Queue, \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\-F\-A\-L\-S\-E} )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{queue_8h_a229037f755b756156e34a440ce134b8b}{x\-Queue\-Handle}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}{x\-Queue\-Generic\-Send} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, const void $\ast$const pv\-Item\-To\-Queue, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Copy\-Position)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_ab6c30bf884a19b31acb4158d04c9c3f0}{x\-Queue\-Generic\-Receive} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} x\-Queue, void $\ast$const pv\-Buffer, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Just\-Peek)
+\item 
+unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_aceeba9457d0f30b2a1c438e14352d7c2}{ux\-Queue\-Messages\-Waiting} (const \hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} x\-Queue)
+\item 
+void \hyperlink{queue_8h_a6b327259567005ab6f12a02feb8fdc7b}{v\-Queue\-Delete} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}{x\-Queue\-Generic\-Send\-From\-I\-S\-R} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, const void $\ast$const pv\-Item\-To\-Queue, signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$px\-Higher\-Priority\-Task\-Woken, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Copy\-Position)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a1e861f8eb3f7f56d10fc626fd76ca3a9}{x\-Queue\-Receive\-From\-I\-S\-R} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, void $\ast$const pv\-Buffer, signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$px\-Higher\-Priority\-Task\-Woken)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_adfc1100da88cb404d40359ea591eeb76}{x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R} (const \hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_ab257893a91f0fba462405b19614cb405}{x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R} (const \hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue)
+\item 
+unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a576ba04bf4abcd971cf784693f485b33}{ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R} (const \hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_aa9bff76f92251533d45348165c082de7}{x\-Queue\-Alt\-Generic\-Send} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, const void $\ast$const pv\-Item\-To\-Queue, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Copy\-Position)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_adf2034938c08ce4ac68edf290e2d6971}{x\-Queue\-Alt\-Generic\-Receive} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, void $\ast$const pv\-Buffer, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Just\-Peeking)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a6336db3a8d0a267780f59163c75fdf74}{x\-Queue\-C\-R\-Send\-From\-I\-S\-R} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, const void $\ast$pv\-Item\-To\-Queue, signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Co\-Routine\-Previously\-Woken)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a05f3267ee4737d7929dd485423205c74}{x\-Queue\-C\-R\-Receive\-From\-I\-S\-R} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, void $\ast$pv\-Buffer, signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$px\-Task\-Woken)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a1d939f7ea1d10b19a57d41143c62adc0}{x\-Queue\-C\-R\-Send} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, const void $\ast$pv\-Item\-To\-Queue, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait)
+\item 
+signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_ac683e1a6f46a9b01fe0f3c464240562b}{x\-Queue\-C\-R\-Receive} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, void $\ast$pv\-Buffer, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait)
+\item 
+\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} \hyperlink{queue_8h_aa1a9000318a03239a00be19fa2e9aa8e}{x\-Queue\-Create\-Mutex} (unsigned char uc\-Queue\-Type)
+\item 
+\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} \hyperlink{queue_8h_a778792256d17b532c0e8d180258b19a5}{x\-Queue\-Create\-Counting\-Semaphore} (unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Count\-Value, unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Initial\-Count)
+\item 
+void $\ast$ \hyperlink{queue_8h_add5e5d3a8d4f8d3ec1c55397fc5ac641}{x\-Queue\-Get\-Mutex\-Holder} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} x\-Semaphore)
+\item 
+\hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a53bfd3d3de22ee9e9e48deab9df6ab4c}{x\-Queue\-Take\-Mutex\-Recursive} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Mutex, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Block\-Time)
+\item 
+\hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_ab1d683ce771aee4e65d2bc205d81a645}{x\-Queue\-Give\-Mutex\-Recursive} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Mutex)
+\item 
+\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} \hyperlink{queue_8h_a3dc667a7811e292f92ea700da2a54565}{x\-Queue\-Generic\-Create} (unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Queue\-Length, unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Item\-Size, unsigned char uc\-Queue\-Type)
+\item 
+void \hyperlink{queue_8h_a3d9e3bc0d64cffa182ddaa6f23a421b1}{v\-Queue\-Wait\-For\-Message\-Restricted} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, \hyperlink{portmacro_8h_a4d746b2ff8fafc490b764c66411ec457}{port\-Tick\-Type} x\-Ticks\-To\-Wait)
+\item 
+\hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{queue_8h_a56f2646c3ccee7d804a78b9d01592a8b}{x\-Queue\-Generic\-Reset} (\hyperlink{queue_8c_a61d827d970d29cb22b4ae3f1db131e4d}{x\-Queue\-Handle} px\-Queue, \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-New\-Queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{queue_8h_a3f926bea6ffa4e2f1af900431d0d90a5}{\index{queue.\-h@{queue.\-h}!queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E}}
+\index{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E~( 0\-U )}}\label{queue_8h_a3f926bea6ffa4e2f1af900431d0d90a5}
+\hypertarget{queue_8h_a8af9c6a83fce59c386da4f22248b56ae}{\index{queue.\-h@{queue.\-h}!queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}}
+\index{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-I\-N\-A\-R\-Y\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E~( 3\-U )}}\label{queue_8h_a8af9c6a83fce59c386da4f22248b56ae}
+\hypertarget{queue_8h_abccf1c95aa0942f8df163d414010542b}{\index{queue.\-h@{queue.\-h}!queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}}
+\index{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G\-\_\-\-S\-E\-M\-A\-P\-H\-O\-R\-E~( 2\-U )}}\label{queue_8h_abccf1c95aa0942f8df163d414010542b}
+\hypertarget{queue_8h_ae9c10f504e758fb69271024dc8d8a8c9}{\index{queue.\-h@{queue.\-h}!queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X}}
+\index{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-M\-U\-T\-E\-X~( 1\-U )}}\label{queue_8h_ae9c10f504e758fb69271024dc8d8a8c9}
+\hypertarget{queue_8h_a6f68aa65394f83b57e34061d9ff44b47}{\index{queue.\-h@{queue.\-h}!queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X}}
+\index{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X@{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-C\-U\-R\-S\-I\-V\-E\-\_\-\-M\-U\-T\-E\-X~( 4\-U )}}\label{queue_8h_a6f68aa65394f83b57e34061d9ff44b47}
+\hypertarget{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}{\index{queue.\-h@{queue.\-h}!queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K@{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K}}
+\index{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K@{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K~( 0 )}}\label{queue_8h_a4d78fa863fbeb90425a2dda08fae8b12}
+\hypertarget{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}{\index{queue.\-h@{queue.\-h}!queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T@{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T}}
+\index{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T@{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T}!queue.h@{queue.\-h}}
+\subsubsection[{queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T~( 1 )}}\label{queue_8h_a6bae395a00f1a4455f0e7fe3c9e76c14}
+\hypertarget{queue_8h_af6c605882aa8f9133dc2e98a02f55e62}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Peek@{x\-Queue\-Alt\-Peek}}
+\index{x\-Queue\-Alt\-Peek@{x\-Queue\-Alt\-Peek}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Peek}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Alt\-Peek(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Buffer, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Alt\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), {\bf pd\-T\-R\-U\-E} )}}\label{queue_8h_af6c605882aa8f9133dc2e98a02f55e62}
+\hypertarget{queue_8h_a4f50206223e1f88f458a3aea4131608d}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Receive@{x\-Queue\-Alt\-Receive}}
+\index{x\-Queue\-Alt\-Receive@{x\-Queue\-Alt\-Receive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Alt\-Receive(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Buffer, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Alt\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), {\bf pd\-F\-A\-L\-S\-E} )}}\label{queue_8h_a4f50206223e1f88f458a3aea4131608d}
+\hypertarget{queue_8h_a2e290abdf4d43a7142be16bda4279f68}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Send\-To\-Back@{x\-Queue\-Alt\-Send\-To\-Back}}
+\index{x\-Queue\-Alt\-Send\-To\-Back@{x\-Queue\-Alt\-Send\-To\-Back}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Send\-To\-Back}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Alt\-Send\-To\-Back(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Alt\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )}}\label{queue_8h_a2e290abdf4d43a7142be16bda4279f68}
+\hypertarget{queue_8h_ae45934bb36e02340278a65cf238b9083}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Send\-To\-Front@{x\-Queue\-Alt\-Send\-To\-Front}}
+\index{x\-Queue\-Alt\-Send\-To\-Front@{x\-Queue\-Alt\-Send\-To\-Front}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Send\-To\-Front}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Alt\-Send\-To\-Front(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Alt\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )}}\label{queue_8h_ae45934bb36e02340278a65cf238b9083}
+\hypertarget{queue_8h_aeb858b824bd74a934ea7ebb81af2a6bb}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Create@{x\-Queue\-Create}}
+\index{x\-Queue\-Create@{x\-Queue\-Create}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Create}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Create(
+\begin{DoxyParamCaption}
+\item[{}]{ux\-Queue\-Length, }
+\item[{}]{ux\-Item\-Size}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Create}( ux\-Queue\-Length, ux\-Item\-Size, {\bf queue\-Q\-U\-E\-U\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-A\-S\-E} )}}\label{queue_8h_aeb858b824bd74a934ea7ebb81af2a6bb}
+\hypertarget{queue_8h_a2df70733bb875477cd9614c5b3446257}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Peek@{x\-Queue\-Peek}}
+\index{x\-Queue\-Peek@{x\-Queue\-Peek}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Peek}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Peek(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Buffer, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), {\bf pd\-T\-R\-U\-E} )}}\label{queue_8h_a2df70733bb875477cd9614c5b3446257}
+\hypertarget{queue_8h_af1549eac0e7f05694a59a0b967c80be3}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Receive@{x\-Queue\-Receive}}
+\index{x\-Queue\-Receive@{x\-Queue\-Receive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Receive(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Buffer, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Receive}( ( x\-Queue ), ( pv\-Buffer ), ( x\-Ticks\-To\-Wait ), {\bf pd\-F\-A\-L\-S\-E} )}}\label{queue_8h_af1549eac0e7f05694a59a0b967c80be3}
+\hypertarget{queue_8h_a808640f7a13dccf68521cc1697cc37bb}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Reset@{x\-Queue\-Reset}}
+\index{x\-Queue\-Reset@{x\-Queue\-Reset}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Reset(
+\begin{DoxyParamCaption}
+\item[{}]{px\-Queue}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Reset}( px\-Queue, {\bf pd\-F\-A\-L\-S\-E} )}}\label{queue_8h_a808640f7a13dccf68521cc1697cc37bb}
+\hypertarget{queue_8h_af7eb49d3249351176992950d9185abe9}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send@{x\-Queue\-Send}}
+\index{x\-Queue\-Send@{x\-Queue\-Send}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )}}\label{queue_8h_af7eb49d3249351176992950d9185abe9}
+\hypertarget{queue_8h_a2e8236e9af01eedcbc8b67a9cb56b1db}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send\-From\-I\-S\-R@{x\-Queue\-Send\-From\-I\-S\-R}}
+\index{x\-Queue\-Send\-From\-I\-S\-R@{x\-Queue\-Send\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send\-From\-I\-S\-R(
+\begin{DoxyParamCaption}
+\item[{}]{px\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{px\-Higher\-Priority\-Task\-Woken}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )}}\label{queue_8h_a2e8236e9af01eedcbc8b67a9cb56b1db}
+\hypertarget{queue_8h_a81d24a2c1199d58efb76fbee15853112}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send\-To\-Back@{x\-Queue\-Send\-To\-Back}}
+\index{x\-Queue\-Send\-To\-Back@{x\-Queue\-Send\-To\-Back}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send\-To\-Back}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send\-To\-Back(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )}}\label{queue_8h_a81d24a2c1199d58efb76fbee15853112}
+\hypertarget{queue_8h_a5a4b46fc55ab9f63b89878b37352f521}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send\-To\-Back\-From\-I\-S\-R@{x\-Queue\-Send\-To\-Back\-From\-I\-S\-R}}
+\index{x\-Queue\-Send\-To\-Back\-From\-I\-S\-R@{x\-Queue\-Send\-To\-Back\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send\-To\-Back\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send\-To\-Back\-From\-I\-S\-R(
+\begin{DoxyParamCaption}
+\item[{}]{px\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{px\-Higher\-Priority\-Task\-Woken}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-B\-A\-C\-K} )}}\label{queue_8h_a5a4b46fc55ab9f63b89878b37352f521}
+\hypertarget{queue_8h_aa612fcc2b1ceee0200f34b942e300b41}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send\-To\-Front@{x\-Queue\-Send\-To\-Front}}
+\index{x\-Queue\-Send\-To\-Front@{x\-Queue\-Send\-To\-Front}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send\-To\-Front}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send\-To\-Front(
+\begin{DoxyParamCaption}
+\item[{}]{x\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send}( ( x\-Queue ), ( pv\-Item\-To\-Queue ), ( x\-Ticks\-To\-Wait ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )}}\label{queue_8h_aa612fcc2b1ceee0200f34b942e300b41}
+\hypertarget{queue_8h_a849dd669e72bfb12314f4445157c9a04}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Send\-To\-Front\-From\-I\-S\-R@{x\-Queue\-Send\-To\-Front\-From\-I\-S\-R}}
+\index{x\-Queue\-Send\-To\-Front\-From\-I\-S\-R@{x\-Queue\-Send\-To\-Front\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Send\-To\-Front\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define x\-Queue\-Send\-To\-Front\-From\-I\-S\-R(
+\begin{DoxyParamCaption}
+\item[{}]{px\-Queue, }
+\item[{}]{pv\-Item\-To\-Queue, }
+\item[{}]{px\-Higher\-Priority\-Task\-Woken}
+\end{DoxyParamCaption}
+)~{\bf x\-Queue\-Generic\-Send\-From\-I\-S\-R}( ( px\-Queue ), ( pv\-Item\-To\-Queue ), ( px\-Higher\-Priority\-Task\-Woken ), {\bf queue\-S\-E\-N\-D\-\_\-\-T\-O\-\_\-\-F\-R\-O\-N\-T} )}}\label{queue_8h_a849dd669e72bfb12314f4445157c9a04}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{queue_8h_a229037f755b756156e34a440ce134b8b}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Handle@{x\-Queue\-Handle}}
+\index{x\-Queue\-Handle@{x\-Queue\-Handle}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf x\-Queue\-Handle}}}\label{queue_8h_a229037f755b756156e34a440ce134b8b}
+Type by which queues are referenced. For example, a call to x\-Queue\-Create returns (via a pointer parameter) an x\-Queue\-Handle variable that can then be used as a parameter to \hyperlink{queue_8h_af7eb49d3249351176992950d9185abe9}{x\-Queue\-Send()}, \hyperlink{queue_8h_af1549eac0e7f05694a59a0b967c80be3}{x\-Queue\-Receive()}, etc. 
+
+\subsection{Function Documentation}
+\hypertarget{queue_8h_aceeba9457d0f30b2a1c438e14352d7c2}{\index{queue.\-h@{queue.\-h}!ux\-Queue\-Messages\-Waiting@{ux\-Queue\-Messages\-Waiting}}
+\index{ux\-Queue\-Messages\-Waiting@{ux\-Queue\-Messages\-Waiting}!queue.h@{queue.\-h}}
+\subsubsection[{ux\-Queue\-Messages\-Waiting}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Queue\-Messages\-Waiting (
+\begin{DoxyParamCaption}
+\item[{const {\bf x\-Queue\-Handle}}]{x\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_aceeba9457d0f30b2a1c438e14352d7c2}
+\hypertarget{queue_8h_a576ba04bf4abcd971cf784693f485b33}{\index{queue.\-h@{queue.\-h}!ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R@{ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R}}
+\index{ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R@{ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Queue\-Messages\-Waiting\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{const {\bf x\-Queue\-Handle}}]{px\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a576ba04bf4abcd971cf784693f485b33}
+\hypertarget{queue_8h_a6b327259567005ab6f12a02feb8fdc7b}{\index{queue.\-h@{queue.\-h}!v\-Queue\-Delete@{v\-Queue\-Delete}}
+\index{v\-Queue\-Delete@{v\-Queue\-Delete}!queue.h@{queue.\-h}}
+\subsubsection[{v\-Queue\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Queue\-Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a6b327259567005ab6f12a02feb8fdc7b}
+\hypertarget{queue_8h_a3d9e3bc0d64cffa182ddaa6f23a421b1}{\index{queue.\-h@{queue.\-h}!v\-Queue\-Wait\-For\-Message\-Restricted@{v\-Queue\-Wait\-For\-Message\-Restricted}}
+\index{v\-Queue\-Wait\-For\-Message\-Restricted@{v\-Queue\-Wait\-For\-Message\-Restricted}!queue.h@{queue.\-h}}
+\subsubsection[{v\-Queue\-Wait\-For\-Message\-Restricted}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Queue\-Wait\-For\-Message\-Restricted (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a3d9e3bc0d64cffa182ddaa6f23a421b1}
+\hypertarget{queue_8h_adf2034938c08ce4ac68edf290e2d6971}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Generic\-Receive@{x\-Queue\-Alt\-Generic\-Receive}}
+\index{x\-Queue\-Alt\-Generic\-Receive@{x\-Queue\-Alt\-Generic\-Receive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Generic\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Alt\-Generic\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{void $\ast$const}]{pv\-Buffer, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Just\-Peeking}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_adf2034938c08ce4ac68edf290e2d6971}
+\hypertarget{queue_8h_aa9bff76f92251533d45348165c082de7}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Alt\-Generic\-Send@{x\-Queue\-Alt\-Generic\-Send}}
+\index{x\-Queue\-Alt\-Generic\-Send@{x\-Queue\-Alt\-Generic\-Send}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Alt\-Generic\-Send}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Alt\-Generic\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{const void $\ast$const}]{pv\-Item\-To\-Queue, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Copy\-Position}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_aa9bff76f92251533d45348165c082de7}
+\hypertarget{queue_8h_a778792256d17b532c0e8d180258b19a5}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Create\-Counting\-Semaphore@{x\-Queue\-Create\-Counting\-Semaphore}}
+\index{x\-Queue\-Create\-Counting\-Semaphore@{x\-Queue\-Create\-Counting\-Semaphore}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Create\-Counting\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\-Queue\-Handle} x\-Queue\-Create\-Counting\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{ux\-Count\-Value, }
+\item[{unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{ux\-Initial\-Count}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a778792256d17b532c0e8d180258b19a5}
+\hypertarget{queue_8h_aa1a9000318a03239a00be19fa2e9aa8e}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Create\-Mutex@{x\-Queue\-Create\-Mutex}}
+\index{x\-Queue\-Create\-Mutex@{x\-Queue\-Create\-Mutex}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Create\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\-Queue\-Handle} x\-Queue\-Create\-Mutex (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{uc\-Queue\-Type}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_aa1a9000318a03239a00be19fa2e9aa8e}
+\hypertarget{queue_8h_ac683e1a6f46a9b01fe0f3c464240562b}{\index{queue.\-h@{queue.\-h}!x\-Queue\-C\-R\-Receive@{x\-Queue\-C\-R\-Receive}}
+\index{x\-Queue\-C\-R\-Receive@{x\-Queue\-C\-R\-Receive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-C\-R\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-C\-R\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{void $\ast$}]{pv\-Buffer, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_ac683e1a6f46a9b01fe0f3c464240562b}
+\hypertarget{queue_8h_a05f3267ee4737d7929dd485423205c74}{\index{queue.\-h@{queue.\-h}!x\-Queue\-C\-R\-Receive\-From\-I\-S\-R@{x\-Queue\-C\-R\-Receive\-From\-I\-S\-R}}
+\index{x\-Queue\-C\-R\-Receive\-From\-I\-S\-R@{x\-Queue\-C\-R\-Receive\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-C\-R\-Receive\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-C\-R\-Receive\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{void $\ast$}]{pv\-Buffer, }
+\item[{signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$}]{px\-Task\-Woken}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a05f3267ee4737d7929dd485423205c74}
+\hypertarget{queue_8h_a1d939f7ea1d10b19a57d41143c62adc0}{\index{queue.\-h@{queue.\-h}!x\-Queue\-C\-R\-Send@{x\-Queue\-C\-R\-Send}}
+\index{x\-Queue\-C\-R\-Send@{x\-Queue\-C\-R\-Send}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-C\-R\-Send}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-C\-R\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{const void $\ast$}]{pv\-Item\-To\-Queue, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a1d939f7ea1d10b19a57d41143c62adc0}
+\hypertarget{queue_8h_a6336db3a8d0a267780f59163c75fdf74}{\index{queue.\-h@{queue.\-h}!x\-Queue\-C\-R\-Send\-From\-I\-S\-R@{x\-Queue\-C\-R\-Send\-From\-I\-S\-R}}
+\index{x\-Queue\-C\-R\-Send\-From\-I\-S\-R@{x\-Queue\-C\-R\-Send\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-C\-R\-Send\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-C\-R\-Send\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{const void $\ast$}]{pv\-Item\-To\-Queue, }
+\item[{signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Co\-Routine\-Previously\-Woken}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a6336db3a8d0a267780f59163c75fdf74}
+\hypertarget{queue_8h_a3dc667a7811e292f92ea700da2a54565}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Generic\-Create@{x\-Queue\-Generic\-Create}}
+\index{x\-Queue\-Generic\-Create@{x\-Queue\-Generic\-Create}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Generic\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\-Queue\-Handle} x\-Queue\-Generic\-Create (
+\begin{DoxyParamCaption}
+\item[{unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{ux\-Queue\-Length, }
+\item[{unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{ux\-Item\-Size, }
+\item[{unsigned char}]{uc\-Queue\-Type}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a3dc667a7811e292f92ea700da2a54565}
+\hypertarget{queue_8h_ab6c30bf884a19b31acb4158d04c9c3f0}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Generic\-Receive@{x\-Queue\-Generic\-Receive}}
+\index{x\-Queue\-Generic\-Receive@{x\-Queue\-Generic\-Receive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Generic\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Generic\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{x\-Queue, }
+\item[{void $\ast$const}]{pv\-Buffer, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Just\-Peek}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_ab6c30bf884a19b31acb4158d04c9c3f0}
+\hypertarget{queue_8h_a56f2646c3ccee7d804a78b9d01592a8b}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Generic\-Reset@{x\-Queue\-Generic\-Reset}}
+\index{x\-Queue\-Generic\-Reset@{x\-Queue\-Generic\-Reset}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Generic\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Generic\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-New\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a56f2646c3ccee7d804a78b9d01592a8b}
+\hypertarget{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Generic\-Send@{x\-Queue\-Generic\-Send}}
+\index{x\-Queue\-Generic\-Send@{x\-Queue\-Generic\-Send}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Generic\-Send}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Generic\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{const void $\ast$const}]{pv\-Item\-To\-Queue, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Ticks\-To\-Wait, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Copy\-Position}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a20cce4e7bd234116d67ebcdbe4ef2f3a}
+\hypertarget{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Generic\-Send\-From\-I\-S\-R@{x\-Queue\-Generic\-Send\-From\-I\-S\-R}}
+\index{x\-Queue\-Generic\-Send\-From\-I\-S\-R@{x\-Queue\-Generic\-Send\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Generic\-Send\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Generic\-Send\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{const void $\ast$const}]{pv\-Item\-To\-Queue, }
+\item[{signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$}]{px\-Higher\-Priority\-Task\-Woken, }
+\item[{{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E}}]{x\-Copy\-Position}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a5f3e29eed8f166215648bc6465ebdb04}
+\hypertarget{queue_8h_add5e5d3a8d4f8d3ec1c55397fc5ac641}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Get\-Mutex\-Holder@{x\-Queue\-Get\-Mutex\-Holder}}
+\index{x\-Queue\-Get\-Mutex\-Holder@{x\-Queue\-Get\-Mutex\-Holder}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Get\-Mutex\-Holder}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ x\-Queue\-Get\-Mutex\-Holder (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{x\-Semaphore}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_add5e5d3a8d4f8d3ec1c55397fc5ac641}
+\hypertarget{queue_8h_ab1d683ce771aee4e65d2bc205d81a645}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Give\-Mutex\-Recursive@{x\-Queue\-Give\-Mutex\-Recursive}}
+\index{x\-Queue\-Give\-Mutex\-Recursive@{x\-Queue\-Give\-Mutex\-Recursive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Give\-Mutex\-Recursive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Give\-Mutex\-Recursive (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Mutex}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_ab1d683ce771aee4e65d2bc205d81a645}
+\hypertarget{queue_8h_adfc1100da88cb404d40359ea591eeb76}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R@{x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R}}
+\index{x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R@{x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Is\-Queue\-Empty\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{const {\bf x\-Queue\-Handle}}]{px\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_adfc1100da88cb404d40359ea591eeb76}
+\hypertarget{queue_8h_ab257893a91f0fba462405b19614cb405}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R@{x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R}}
+\index{x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R@{x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Is\-Queue\-Full\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{const {\bf x\-Queue\-Handle}}]{px\-Queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_ab257893a91f0fba462405b19614cb405}
+\hypertarget{queue_8h_a1e861f8eb3f7f56d10fc626fd76ca3a9}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Receive\-From\-I\-S\-R@{x\-Queue\-Receive\-From\-I\-S\-R}}
+\index{x\-Queue\-Receive\-From\-I\-S\-R@{x\-Queue\-Receive\-From\-I\-S\-R}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Receive\-From\-I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Receive\-From\-I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Queue, }
+\item[{void $\ast$const}]{pv\-Buffer, }
+\item[{signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} $\ast$}]{px\-Higher\-Priority\-Task\-Woken}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a1e861f8eb3f7f56d10fc626fd76ca3a9}
+\hypertarget{queue_8h_a53bfd3d3de22ee9e9e48deab9df6ab4c}{\index{queue.\-h@{queue.\-h}!x\-Queue\-Take\-Mutex\-Recursive@{x\-Queue\-Take\-Mutex\-Recursive}}
+\index{x\-Queue\-Take\-Mutex\-Recursive@{x\-Queue\-Take\-Mutex\-Recursive}!queue.h@{queue.\-h}}
+\subsubsection[{x\-Queue\-Take\-Mutex\-Recursive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Queue\-Take\-Mutex\-Recursive (
+\begin{DoxyParamCaption}
+\item[{{\bf x\-Queue\-Handle}}]{px\-Mutex, }
+\item[{{\bf port\-Tick\-Type}}]{x\-Block\-Time}
+\end{DoxyParamCaption}
+)}}\label{queue_8h_a53bfd3d3de22ee9e9e48deab9df6ab4c}

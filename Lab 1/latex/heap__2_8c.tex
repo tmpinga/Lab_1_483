@@ -1,0 +1,145 @@
+\hypertarget{heap__2_8c}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/heap\-\_\-2.c File Reference}
+\label{heap__2_8c}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/heap\-\_\-2.\-c@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/heap\-\_\-2.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Free\-R\-T\-O\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union {\bfseries x\-R\-T\-O\-S\-\_\-\-H\-E\-A\-P}
+\item 
+struct \hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{A\-\_\-\-B\-L\-O\-C\-K\-\_\-\-L\-I\-N\-K}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{heap__2_8c_ab622d8c674f2a417a666a7ed89109e79}{M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E}
+\item 
+\#define \hyperlink{heap__2_8c_ab71bae5a95671265c828339d44c44b25}{heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}~( ( size\-\_\-t ) ( heap\-S\-T\-R\-U\-C\-T\-\_\-\-S\-I\-Z\-E $\ast$ 2 ) )
+\item 
+\#define \hyperlink{heap__2_8c_a55396870242c952746147671bf78a149}{prv\-Insert\-Block\-Into\-Free\-List}(px\-Block\-To\-Insert)
+\item 
+\#define \hyperlink{heap__2_8c_aa856ed52b475c07c5865e4efdc265529}{prv\-Heap\-Init}()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{A\-\_\-\-B\-L\-O\-C\-K\-\_\-\-L\-I\-N\-K} \hyperlink{heap__2_8c_abe86dd2e4a4126a34a0776173b078bf0}{x\-Block\-Link}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{heap__2_8c_a0379669d07d76cc81e3028123113b271}{pv\-Port\-Malloc} (size\-\_\-t x\-Wanted\-Size)
+\item 
+void \hyperlink{heap__2_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}{v\-Port\-Free} (void $\ast$pv)
+\item 
+size\-\_\-t \hyperlink{heap__2_8c_a0c28a12b313bc248be0cb7a37ed81bb7}{x\-Port\-Get\-Free\-Heap\-Size} (void)
+\item 
+void \hyperlink{heap__2_8c_a8bf103ce32ce8473574e9920af8b4eec}{v\-Port\-Initialise\-Blocks} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{heap__2_8c_ab71bae5a95671265c828339d44c44b25}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E@{heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}}
+\index{heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E@{heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define heap\-M\-I\-N\-I\-M\-U\-M\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E~( ( size\-\_\-t ) ( heap\-S\-T\-R\-U\-C\-T\-\_\-\-S\-I\-Z\-E $\ast$ 2 ) )}}\label{heap__2_8c_ab71bae5a95671265c828339d44c44b25}
+\hypertarget{heap__2_8c_ab622d8c674f2a417a666a7ed89109e79}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E@{M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E}}
+\index{M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E@{M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-P\-U\-\_\-\-W\-R\-A\-P\-P\-E\-R\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-D\-\_\-\-F\-R\-O\-M\-\_\-\-A\-P\-I\-\_\-\-F\-I\-L\-E}}\label{heap__2_8c_ab622d8c674f2a417a666a7ed89109e79}
+\hypertarget{heap__2_8c_aa856ed52b475c07c5865e4efdc265529}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!prv\-Heap\-Init@{prv\-Heap\-Init}}
+\index{prv\-Heap\-Init@{prv\-Heap\-Init}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{prv\-Heap\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\#define prv\-Heap\-Init(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_aa856ed52b475c07c5865e4efdc265529}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{                                                                                   
+      \hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{\(\backslash\)}
+\hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{xBlockLink} *pxFirstFreeBlock;                                                     \(\backslash\)
+                                                                                    \(\backslash\)
+    \textcolor{comment}{/* xStart is used to hold a pointer to the first item in the list of free */}    \(\backslash\)
+    \textcolor{comment}{/* blocks.  The void cast is used to prevent compiler warnings. */}              \(\backslash\)
+    xStart.\hyperlink{struct_a___b_l_o_c_k___l_i_n_k_ae48282896c5b0af5cb25f914f3c1c936}{pxNextFreeBlock} = ( \textcolor{keywordtype}{void} * ) xHeap.ucHeap;                                \(\backslash\)
+    xStart.\hyperlink{struct_a___b_l_o_c_k___l_i_n_k_a130b4f85ad4cc46ca0f3d36001769696}{xBlockSize} = ( \textcolor{keywordtype}{size\_t} ) 0;                                             \(\backslash\)
+                                                                                    \(\backslash\)
+    \textcolor{comment}{/* xEnd is used to mark the end of the list of free blocks. */}                  \(\backslash\)
+    xEnd.xBlockSize = \hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{configTOTAL\_HEAP\_SIZE};                                       \(\backslash\)
+    xEnd.pxNextFreeBlock = NULL;                                                    \(\backslash\)
+                                                                                    \(\backslash\)
+    \textcolor{comment}{/* To start with there is a single free block that is sized to take up the      \(\backslash\)}
+\textcolor{comment}{    entire heap space. */}                                                           \(\backslash\)
+    pxFirstFreeBlock = ( \textcolor{keywordtype}{void} * ) xHeap.ucHeap;                                     \(\backslash\)
+    pxFirstFreeBlock->xBlockSize = \hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{configTOTAL\_HEAP\_SIZE};                          \(\backslash\)
+    pxFirstFreeBlock->pxNextFreeBlock = &xEnd;                                      \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{heap__2_8c_a55396870242c952746147671bf78a149}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!prv\-Insert\-Block\-Into\-Free\-List@{prv\-Insert\-Block\-Into\-Free\-List}}
+\index{prv\-Insert\-Block\-Into\-Free\-List@{prv\-Insert\-Block\-Into\-Free\-List}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{prv\-Insert\-Block\-Into\-Free\-List}]{\setlength{\rightskip}{0pt plus 5cm}\#define prv\-Insert\-Block\-Into\-Free\-List(
+\begin{DoxyParamCaption}
+\item[{}]{px\-Block\-To\-Insert}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_a55396870242c952746147671bf78a149}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{                                                                                   
+      \hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{\(\backslash\)}
+\hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{xBlockLink} *pxIterator;                                                               \(\backslash\)
+size\_t xBlockSize;                                                                  \(\backslash\)
+                                                                                    \(\backslash\)
+    xBlockSize = pxBlockToInsert->\hyperlink{struct_a___b_l_o_c_k___l_i_n_k_a130b4f85ad4cc46ca0f3d36001769696}{xBlockSize};                                     \(\backslash\)
+                                                                                    \(\backslash\)
+    \textcolor{comment}{/* Iterate through the list until a block is found that has a larger size */}    \(\backslash\)
+    \textcolor{comment}{/* than the block we are inserting. */}                                          \(\backslash\)
+    for( pxIterator = &xStart; pxIterator->pxNextFreeBlock->xBlockSize < xBlockSize; pxIterator = 
+      pxIterator->pxNextFreeBlock ) \(\backslash\)
+    \{                                                                               \(\backslash\)
+        \textcolor{comment}{/* There is nothing to do here - just iterate to the correct position. */}   \(\backslash\)
+    \}                                                                               \(\backslash\)
+                                                                                    \(\backslash\)
+    \textcolor{comment}{/* Update the list to include the block being inserted in the correct */}        \(\backslash\)
+    \textcolor{comment}{/* position. */}                                                                 \(\backslash\)
+    pxBlockToInsert->pxNextFreeBlock = pxIterator->pxNextFreeBlock;                 \(\backslash\)
+    pxIterator->pxNextFreeBlock = pxBlockToInsert;                                  \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{heap__2_8c_abe86dd2e4a4126a34a0776173b078bf0}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!x\-Block\-Link@{x\-Block\-Link}}
+\index{x\-Block\-Link@{x\-Block\-Link}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{x\-Block\-Link}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf A\-\_\-\-B\-L\-O\-C\-K\-\_\-\-L\-I\-N\-K}  {\bf x\-Block\-Link}}}\label{heap__2_8c_abe86dd2e4a4126a34a0776173b078bf0}
+
+
+\subsection{Function Documentation}
+\hypertarget{heap__2_8c_a0379669d07d76cc81e3028123113b271}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!pv\-Port\-Malloc@{pv\-Port\-Malloc}}
+\index{pv\-Port\-Malloc@{pv\-Port\-Malloc}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{pv\-Port\-Malloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ pv\-Port\-Malloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{x\-Wanted\-Size}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_a0379669d07d76cc81e3028123113b271}
+\hypertarget{heap__2_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!v\-Port\-Free@{v\-Port\-Free}}
+\index{v\-Port\-Free@{v\-Port\-Free}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{v\-Port\-Free}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Port\-Free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pv}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}
+\hypertarget{heap__2_8c_a8bf103ce32ce8473574e9920af8b4eec}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!v\-Port\-Initialise\-Blocks@{v\-Port\-Initialise\-Blocks}}
+\index{v\-Port\-Initialise\-Blocks@{v\-Port\-Initialise\-Blocks}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{v\-Port\-Initialise\-Blocks}]{\setlength{\rightskip}{0pt plus 5cm}void v\-Port\-Initialise\-Blocks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_a8bf103ce32ce8473574e9920af8b4eec}
+\hypertarget{heap__2_8c_a0c28a12b313bc248be0cb7a37ed81bb7}{\index{heap\-\_\-2.\-c@{heap\-\_\-2.\-c}!x\-Port\-Get\-Free\-Heap\-Size@{x\-Port\-Get\-Free\-Heap\-Size}}
+\index{x\-Port\-Get\-Free\-Heap\-Size@{x\-Port\-Get\-Free\-Heap\-Size}!heap_2.c@{heap\-\_\-2.\-c}}
+\subsubsection[{x\-Port\-Get\-Free\-Heap\-Size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t x\-Port\-Get\-Free\-Heap\-Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{heap__2_8c_a0c28a12b313bc248be0cb7a37ed81bb7}

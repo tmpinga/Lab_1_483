@@ -1,0 +1,69 @@
+\hypertarget{struct_queue_definition}{\section{Queue\-Definition Struct Reference}
+\label{struct_queue_definition}\index{Queue\-Definition@{Queue\-Definition}}
+}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+signed char $\ast$ \hyperlink{struct_queue_definition_a7d7ae71baf9539e4ade463b54147197e}{pc\-Head}
+\item 
+signed char $\ast$ \hyperlink{struct_queue_definition_a8bc9e31a442a36c633134d81dad7ad1f}{pc\-Tail}
+\item 
+signed char $\ast$ \hyperlink{struct_queue_definition_a863fa84a9d1fed859baa798f3ae3edf7}{pc\-Write\-To}
+\item 
+signed char $\ast$ \hyperlink{struct_queue_definition_a89f93906bf3bc6a600cf2a8c08606d47}{pc\-Read\-From}
+\item 
+\hyperlink{list_8h_a3cee7d8d40380f66ac73b8825b5a0fb0}{x\-List} \hyperlink{struct_queue_definition_ad9e6557a628289c53f38c3bfb6f48a8a}{x\-Tasks\-Waiting\-To\-Send}
+\item 
+\hyperlink{list_8h_a3cee7d8d40380f66ac73b8825b5a0fb0}{x\-List} \hyperlink{struct_queue_definition_a3962c65a11b34c178604bcff6720c531}{x\-Tasks\-Waiting\-To\-Receive}
+\item 
+volatile unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{struct_queue_definition_a4df0574070ab314745720d558e136dea}{ux\-Messages\-Waiting}
+\item 
+unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{struct_queue_definition_a7ec3bc99d2c6f0cbac8f556927bd2890}{ux\-Length}
+\item 
+unsigned \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{struct_queue_definition_a0380a8f6684f54b7caec84f9c4683785}{ux\-Item\-Size}
+\item 
+volatile signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{struct_queue_definition_ab5e5ef7cf924973186edf123f4a9135d}{x\-Rx\-Lock}
+\item 
+volatile signed \hyperlink{portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} \hyperlink{struct_queue_definition_a4e0a97a74ff0c54c4f52fada8af05562}{x\-Tx\-Lock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_queue_definition_a7d7ae71baf9539e4ade463b54147197e}{\index{Queue\-Definition@{Queue\-Definition}!pc\-Head@{pc\-Head}}
+\index{pc\-Head@{pc\-Head}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{pc\-Head}]{\setlength{\rightskip}{0pt plus 5cm}signed char$\ast$ pc\-Head}}\label{struct_queue_definition_a7d7ae71baf9539e4ade463b54147197e}
+\hypertarget{struct_queue_definition_a89f93906bf3bc6a600cf2a8c08606d47}{\index{Queue\-Definition@{Queue\-Definition}!pc\-Read\-From@{pc\-Read\-From}}
+\index{pc\-Read\-From@{pc\-Read\-From}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{pc\-Read\-From}]{\setlength{\rightskip}{0pt plus 5cm}signed char$\ast$ pc\-Read\-From}}\label{struct_queue_definition_a89f93906bf3bc6a600cf2a8c08606d47}
+\hypertarget{struct_queue_definition_a8bc9e31a442a36c633134d81dad7ad1f}{\index{Queue\-Definition@{Queue\-Definition}!pc\-Tail@{pc\-Tail}}
+\index{pc\-Tail@{pc\-Tail}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{pc\-Tail}]{\setlength{\rightskip}{0pt plus 5cm}signed char$\ast$ pc\-Tail}}\label{struct_queue_definition_a8bc9e31a442a36c633134d81dad7ad1f}
+\hypertarget{struct_queue_definition_a863fa84a9d1fed859baa798f3ae3edf7}{\index{Queue\-Definition@{Queue\-Definition}!pc\-Write\-To@{pc\-Write\-To}}
+\index{pc\-Write\-To@{pc\-Write\-To}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{pc\-Write\-To}]{\setlength{\rightskip}{0pt plus 5cm}signed char$\ast$ pc\-Write\-To}}\label{struct_queue_definition_a863fa84a9d1fed859baa798f3ae3edf7}
+\hypertarget{struct_queue_definition_a0380a8f6684f54b7caec84f9c4683785}{\index{Queue\-Definition@{Queue\-Definition}!ux\-Item\-Size@{ux\-Item\-Size}}
+\index{ux\-Item\-Size@{ux\-Item\-Size}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{ux\-Item\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Item\-Size}}\label{struct_queue_definition_a0380a8f6684f54b7caec84f9c4683785}
+\hypertarget{struct_queue_definition_a7ec3bc99d2c6f0cbac8f556927bd2890}{\index{Queue\-Definition@{Queue\-Definition}!ux\-Length@{ux\-Length}}
+\index{ux\-Length@{ux\-Length}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{ux\-Length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Length}}\label{struct_queue_definition_a7ec3bc99d2c6f0cbac8f556927bd2890}
+\hypertarget{struct_queue_definition_a4df0574070ab314745720d558e136dea}{\index{Queue\-Definition@{Queue\-Definition}!ux\-Messages\-Waiting@{ux\-Messages\-Waiting}}
+\index{ux\-Messages\-Waiting@{ux\-Messages\-Waiting}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{ux\-Messages\-Waiting}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} ux\-Messages\-Waiting}}\label{struct_queue_definition_a4df0574070ab314745720d558e136dea}
+\hypertarget{struct_queue_definition_ab5e5ef7cf924973186edf123f4a9135d}{\index{Queue\-Definition@{Queue\-Definition}!x\-Rx\-Lock@{x\-Rx\-Lock}}
+\index{x\-Rx\-Lock@{x\-Rx\-Lock}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{x\-Rx\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}volatile signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Rx\-Lock}}\label{struct_queue_definition_ab5e5ef7cf924973186edf123f4a9135d}
+\hypertarget{struct_queue_definition_a3962c65a11b34c178604bcff6720c531}{\index{Queue\-Definition@{Queue\-Definition}!x\-Tasks\-Waiting\-To\-Receive@{x\-Tasks\-Waiting\-To\-Receive}}
+\index{x\-Tasks\-Waiting\-To\-Receive@{x\-Tasks\-Waiting\-To\-Receive}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{x\-Tasks\-Waiting\-To\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\-List} x\-Tasks\-Waiting\-To\-Receive}}\label{struct_queue_definition_a3962c65a11b34c178604bcff6720c531}
+\hypertarget{struct_queue_definition_ad9e6557a628289c53f38c3bfb6f48a8a}{\index{Queue\-Definition@{Queue\-Definition}!x\-Tasks\-Waiting\-To\-Send@{x\-Tasks\-Waiting\-To\-Send}}
+\index{x\-Tasks\-Waiting\-To\-Send@{x\-Tasks\-Waiting\-To\-Send}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{x\-Tasks\-Waiting\-To\-Send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x\-List} x\-Tasks\-Waiting\-To\-Send}}\label{struct_queue_definition_ad9e6557a628289c53f38c3bfb6f48a8a}
+\hypertarget{struct_queue_definition_a4e0a97a74ff0c54c4f52fada8af05562}{\index{Queue\-Definition@{Queue\-Definition}!x\-Tx\-Lock@{x\-Tx\-Lock}}
+\index{x\-Tx\-Lock@{x\-Tx\-Lock}!QueueDefinition@{Queue\-Definition}}
+\subsubsection[{x\-Tx\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}volatile signed {\bf port\-B\-A\-S\-E\-\_\-\-T\-Y\-P\-E} x\-Tx\-Lock}}\label{struct_queue_definition_a4e0a97a74ff0c54c4f52fada8af05562}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/\hyperlink{queue_8c}{queue.\-c}\end{DoxyCompactItemize}

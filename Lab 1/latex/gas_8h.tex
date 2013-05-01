@@ -1,0 +1,148 @@
+\hypertarget{gas_8h}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/assembler/gas.h File Reference}
+\label{gas_8h}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/assembler/gas.\-h@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/assembler/gas.\-h}}
+}
+
+
+Assembler abstraction layer\-: G\-N\-U Assembler specifics.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gas_8h_a21400c6e118a20b3b7881ae06fcc6391}{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, \hyperlink{gas_8h_ad8d19961c6c5914f33ba3fe8d31bf6e2}{segment})~gas\-\_\-begin\-\_\-func\-\_\-segm \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} 1 \hyperlink{gas_8h_ad8d19961c6c5914f33ba3fe8d31bf6e2}{segment}
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Control Statements}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__assembler__group_ga17f8b386ac2ef0f331bdaa4f5e21b71b}{R\-E\-P\-E\-A\-T}(count)~.rept   count
+\begin{DoxyCompactList}\small\item\em Repeat the following statements {\itshape count} times. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_gaa53644ea7a4fec702079e066770eed6d}{E\-N\-D\-\_\-\-R\-E\-P\-E\-A\-T}()~.endr
+\begin{DoxyCompactList}\small\item\em Mark the end of the statements to be repeated. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga3a8bd27aec4611e3c0d1168f092272a5}{S\-E\-T\-\_\-\-L\-O\-C}(offset)~.org    offset
+\begin{DoxyCompactList}\small\item\em Set the location counter to {\itshape offset}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga7795075d7ca3529a86ce8e60fc6f0adb}{E\-N\-D\-\_\-\-F\-I\-L\-E}()
+\begin{DoxyCompactList}\small\item\em Mark the end of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Data Objects}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__assembler__group_ga3ab35e172e72f27c4210f5009fb35202}{F\-I\-L\-L\-\_\-\-B\-Y\-T\-E\-S}(count)~.fill   count
+\begin{DoxyCompactList}\small\item\em Allocate space for {\itshape count} bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Symbol Definition}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__assembler__group_ga8e298c540513429b516bba4896bc2e6d}{L}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.L\#\#\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}
+\begin{DoxyCompactList}\small\item\em Turn {\itshape name} into a local symbol, if possible. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga4ec6c5fa246498ad62aa1fae32e0cc63}{E\-X\-T\-E\-R\-N\-\_\-\-S\-Y\-M\-B\-O\-L}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})
+\begin{DoxyCompactList}\small\item\em Declare {\itshape name} as an external symbol referenced by this file. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga4f62d0e155df806b451e332fd5a8e641}{F\-U\-N\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~gas\-\_\-begin\-\_\-func \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} 0
+\begin{DoxyCompactList}\small\item\em Define a file-\/local function called {\itshape name}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_gae2b2aca7cb222177274d51289b51228f}{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~gas\-\_\-begin\-\_\-func \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} 1
+\begin{DoxyCompactList}\small\item\em Define a globally visible function called {\itshape name}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga81ab44c8186c742be6d8b16b9cb09b8b}{W\-E\-A\-K\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~gas\-\_\-weak\-\_\-function \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}
+\begin{DoxyCompactList}\small\item\em Define a weak function called {\itshape name}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga43ce83c479dda75a6edadaa377ed817d}{W\-E\-A\-K\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-A\-L\-I\-A\-S}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, strong\-\_\-name)~gas\-\_\-weak\-\_\-function\-\_\-alias \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} strong\-\_\-name
+\begin{DoxyCompactList}\small\item\em Define {\itshape name} as a weak alias for the function {\itshape strong\-\_\-name}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga7a448fd290779d129685888f80cd76ff}{E\-N\-D\-\_\-\-F\-U\-N\-C}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.size   \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, . -\/ \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}
+\begin{DoxyCompactList}\small\item\em Mark the end of the function called {\itshape name}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Section Definition}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__assembler__group_ga8e8471b5cb4a0e8bc8cefb35cc8ebb3d}{T\-E\-X\-T\-\_\-\-S\-E\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.section \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, \char`\"{}ax\char`\"{}, @progbits
+\begin{DoxyCompactList}\small\item\em Start a new section containing executable code. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_gadd34e4da24622d99c3b28211c28cac68}{R\-O\-D\-A\-T\-A\-\_\-\-S\-E\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.section \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, \char`\"{}a\char`\"{}, @progbits
+\begin{DoxyCompactList}\small\item\em Start a new section containing read-\/only data. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga2d1becf75eb73256b236ed19b28f76bf}{D\-A\-T\-A\-\_\-\-S\-E\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.section \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, \char`\"{}aw\char`\"{}, @progbits
+\begin{DoxyCompactList}\small\item\em Start a new section containing writeable initialized data. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__assembler__group_ga9c174ffe0958450a515a04007564fc19}{B\-S\-S\-\_\-\-S\-E\-C\-T\-I\-O\-N}(\hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name})~.section \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}, \char`\"{}aw\char`\"{}, @nobits
+\begin{DoxyCompactList}\small\item\em Start a new section containing writeable zero-\/initialized data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+macro \hyperlink{gas_8h_adb47a30becc9e0b6421042ea82a11913}{ld\-\_\-addr}
+\item 
+macro \hyperlink{gas_8h_aa4b46a1282f30708817129b9079baeb2}{reg}
+\item 
+macro sym lda w sym endm macro \\*
+gas\-\_\-begin\-\_\-func \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name}
+\item 
+macro sym lda w sym endm macro \\*
+gas\-\_\-begin\-\_\-func \hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public} if \\*
+\hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public} global \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} endif \\*
+section text \hyperlink{gas_8h_a1e7848fc01d8fbdad15ce85530e56971}{ax}
+\item 
+macro sym lda w sym endm macro \\*
+gas\-\_\-begin\-\_\-func is\-\_\-public if \\*
+is\-\_\-public global \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} endif \\*
+section text progbits type \\*
+function \hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public}
+\item 
+macro sym lda w sym endm macro \\*
+gas\-\_\-begin\-\_\-func \hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public} if \\*
+\hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public} global \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} endif \\*
+section text progbits type \\*
+function segment if \hyperlink{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{is\-\_\-public} \\*
+global \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} endif section \hyperlink{gas_8h_ad8d19961c6c5914f33ba3fe8d31bf6e2}{segment}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Assembler abstraction layer\-: G\-N\-U Assembler specifics. Copyright (c) 2009-\/2012 Atmel Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\-:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyEnumerate}
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyEnumerate}
+\item The name of Atmel may not be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyEnumerate}
+\item This software may only be redistributed and used in connection with an Atmel microcontroller product.
+\end{DoxyEnumerate}
+
+T\-H\-I\-S S\-O\-F\-T\-W\-A\-R\-E I\-S P\-R\-O\-V\-I\-D\-E\-D B\-Y A\-T\-M\-E\-L \char`\"{}\-A\-S I\-S\char`\"{} A\-N\-D A\-N\-Y E\-X\-P\-R\-E\-S\-S O\-R I\-M\-P\-L\-I\-E\-D W\-A\-R\-R\-A\-N\-T\-I\-E\-S, I\-N\-C\-L\-U\-D\-I\-N\-G, B\-U\-T N\-O\-T L\-I\-M\-I\-T\-E\-D T\-O, T\-H\-E I\-M\-P\-L\-I\-E\-D W\-A\-R\-R\-A\-N\-T\-I\-E\-S O\-F M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y, F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E A\-N\-D N\-O\-N-\/\-I\-N\-F\-R\-I\-N\-G\-E\-M\-E\-N\-T A\-R\-E E\-X\-P\-R\-E\-S\-S\-L\-Y A\-N\-D S\-P\-E\-C\-I\-F\-I\-C\-A\-L\-L\-Y D\-I\-S\-C\-L\-A\-I\-M\-E\-D. I\-N N\-O E\-V\-E\-N\-T S\-H\-A\-L\-L A\-T\-M\-E\-L B\-E L\-I\-A\-B\-L\-E F\-O\-R A\-N\-Y D\-I\-R\-E\-C\-T, I\-N\-D\-I\-R\-E\-C\-T, I\-N\-C\-I\-D\-E\-N\-T\-A\-L, S\-P\-E\-C\-I\-A\-L, E\-X\-E\-M\-P\-L\-A\-R\-Y, O\-R C\-O\-N\-S\-E\-Q\-U\-E\-N\-T\-I\-A\-L D\-A\-M\-A\-G\-E\-S (I\-N\-C\-L\-U\-D\-I\-N\-G, B\-U\-T N\-O\-T L\-I\-M\-I\-T\-E\-D T\-O, P\-R\-O\-C\-U\-R\-E\-M\-E\-N\-T O\-F S\-U\-B\-S\-T\-I\-T\-U\-T\-E G\-O\-O\-D\-S O\-R S\-E\-R\-V\-I\-C\-E\-S; L\-O\-S\-S O\-F U\-S\-E, D\-A\-T\-A, O\-R P\-R\-O\-F\-I\-T\-S; O\-R B\-U\-S\-I\-N\-E\-S\-S I\-N\-T\-E\-R\-R\-U\-P\-T\-I\-O\-N) H\-O\-W\-E\-V\-E\-R C\-A\-U\-S\-E\-D A\-N\-D O\-N A\-N\-Y T\-H\-E\-O\-R\-Y O\-F L\-I\-A\-B\-I\-L\-I\-T\-Y, W\-H\-E\-T\-H\-E\-R I\-N C\-O\-N\-T\-R\-A\-C\-T, S\-T\-R\-I\-C\-T L\-I\-A\-B\-I\-L\-I\-T\-Y, O\-R T\-O\-R\-T (I\-N\-C\-L\-U\-D\-I\-N\-G N\-E\-G\-L\-I\-G\-E\-N\-C\-E O\-R O\-T\-H\-E\-R\-W\-I\-S\-E) A\-R\-I\-S\-I\-N\-G I\-N A\-N\-Y W\-A\-Y O\-U\-T O\-F T\-H\-E U\-S\-E O\-F T\-H\-I\-S S\-O\-F\-T\-W\-A\-R\-E, E\-V\-E\-N I\-F A\-D\-V\-I\-S\-E\-D O\-F T\-H\-E P\-O\-S\-S\-I\-B\-I\-L\-I\-T\-Y O\-F S\-U\-C\-H D\-A\-M\-A\-G\-E.
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gas_8h_a21400c6e118a20b3b7881ae06fcc6391}{\index{gas.\-h@{gas.\-h}!P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T@{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T}}
+\index{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T@{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T}!gas.h@{gas.\-h}}
+\subsubsection[{P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-U\-B\-L\-I\-C\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-S\-E\-G\-M\-E\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf name}, }
+\item[{}]{{\bf segment}}
+\end{DoxyParamCaption}
+)~gas\-\_\-begin\-\_\-func\-\_\-segm {\bf name} 1 {\bf segment}}}\label{gas_8h_a21400c6e118a20b3b7881ae06fcc6391}
+
+
+\subsection{Variable Documentation}
+\hypertarget{gas_8h_a1e7848fc01d8fbdad15ce85530e56971}{\index{gas.\-h@{gas.\-h}!ax@{ax}}
+\index{ax@{ax}!gas.h@{gas.\-h}}
+\subsubsection[{ax}]{\setlength{\rightskip}{0pt plus 5cm}macro sym lda w sym endm macro gas\-\_\-begin\-\_\-func {\bf is\-\_\-public} if {\bf is\-\_\-public} global {\bf name} endif section text progbits type function {\bf segment} if {\bf is\-\_\-public} global {\bf name} endif section ax}}\label{gas_8h_a1e7848fc01d8fbdad15ce85530e56971}
+\hypertarget{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}{\index{gas.\-h@{gas.\-h}!is\-\_\-public@{is\-\_\-public}}
+\index{is\-\_\-public@{is\-\_\-public}!gas.h@{gas.\-h}}
+\subsubsection[{is\-\_\-public}]{\setlength{\rightskip}{0pt plus 5cm}macro sym lda w sym endm macro gas\-\_\-begin\-\_\-func is\-\_\-public if is\-\_\-public global {\bf name} endif section text progbits type function is\-\_\-public}}\label{gas_8h_ae5faefe09af5e5c1c4e1f3ddc75ca08f}
+\hypertarget{gas_8h_adb47a30becc9e0b6421042ea82a11913}{\index{gas.\-h@{gas.\-h}!ld\-\_\-addr@{ld\-\_\-addr}}
+\index{ld\-\_\-addr@{ld\-\_\-addr}!gas.h@{gas.\-h}}
+\subsubsection[{ld\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}macro ld\-\_\-addr}}\label{gas_8h_adb47a30becc9e0b6421042ea82a11913}
+\hypertarget{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{\index{gas.\-h@{gas.\-h}!name@{name}}
+\index{name@{name}!gas.h@{gas.\-h}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}macro sym lda w sym endm macro gas\-\_\-begin\-\_\-func {\bf is\-\_\-public} if {\bf is\-\_\-public} global name endif section text progbits type function {\bf segment} if {\bf is\-\_\-public} global name endif section progbits type function strong\-\_\-name global name weak name type function set name}}\label{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}
+\hypertarget{gas_8h_aa4b46a1282f30708817129b9079baeb2}{\index{gas.\-h@{gas.\-h}!reg@{reg}}
+\index{reg@{reg}!gas.h@{gas.\-h}}
+\subsubsection[{reg}]{\setlength{\rightskip}{0pt plus 5cm}macro sym lda w reg}}\label{gas_8h_aa4b46a1282f30708817129b9079baeb2}
+\hypertarget{gas_8h_ad8d19961c6c5914f33ba3fe8d31bf6e2}{\index{gas.\-h@{gas.\-h}!segment@{segment}}
+\index{segment@{segment}!gas.h@{gas.\-h}}
+\subsubsection[{segment}]{\setlength{\rightskip}{0pt plus 5cm}macro sym lda w sym endm macro gas\-\_\-begin\-\_\-func {\bf is\-\_\-public} if {\bf is\-\_\-public} global {\bf name} endif section text progbits type function segment if {\bf is\-\_\-public} global {\bf name} endif section segment}}\label{gas_8h_ad8d19961c6c5914f33ba3fe8d31bf6e2}

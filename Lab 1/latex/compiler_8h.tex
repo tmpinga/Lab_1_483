@@ -1,0 +1,104 @@
+\hypertarget{compiler_8h}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/compiler.h File Reference}
+\label{compiler_8h}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/compiler.\-h@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab483\-\_\-1\-\_\-\-State\-Mach/\-Lab483\-\_\-1\-\_\-\-State\-Mach/src/asf/mega/utils/compiler.\-h}}
+}
+
+
+Commonly used includes, types and macros.  
+
+
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$parts.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}interrupt.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{compiler_8h_ada67c62b1c57e07efa04431bc40b9238}{U\-N\-U\-S\-E\-D}(v)~(void)(v)
+\begin{DoxyCompactList}\small\item\em Marking {\itshape v} as a unused parameter or value. \end{DoxyCompactList}\item 
+\#define \hyperlink{compiler_8h_a417dba7f63dde98dbebd6336d8af9d91}{unused}(v)~do \{ (void)(v); \} while(0)
+\begin{DoxyCompactList}\small\item\em Marking {\itshape v} as a unused parameter or value. \end{DoxyCompactList}\item 
+\#define \hyperlink{compiler_8h_a53290ac2df2384738b8769c76622f803}{barrier}()~asm (\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Memory barrier. \end{DoxyCompactList}\item 
+\#define \hyperlink{compiler_8h_aab1e54dcc40192f9704e8b252635450f}{Assert}(expr)~((void) 0)
+\begin{DoxyCompactList}\small\item\em This macro is used to test fatal errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf M\-C\-U Endianism Handling}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{compiler_8h_abee1b74eceef5a0cf26efbf3ff87ccbf}{M\-S\-B}(u16)~(((uint8\-\_\-t$\ast$ )\&u16)\mbox{[}1\mbox{]})
+\item 
+\#define \hyperlink{compiler_8h_abd2fa7b756342ae251e3a7a66670c2fe}{L\-S\-B}(u16)~(((uint8\-\_\-t$\ast$ )\&u16)\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Commonly used includes, types and macros. Copyright (c) 2011-\/2012 Atmel Corporation. All rights reserved.
+
+\subsection{Macro Definition Documentation}
+\hypertarget{compiler_8h_aab1e54dcc40192f9704e8b252635450f}{\index{compiler.\-h@{compiler.\-h}!Assert@{Assert}}
+\index{Assert@{Assert}!compiler.h@{compiler.\-h}}
+\subsubsection[{Assert}]{\setlength{\rightskip}{0pt plus 5cm}\#define Assert(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~((void) 0)}}\label{compiler_8h_aab1e54dcc40192f9704e8b252635450f}
+
+
+This macro is used to test fatal errors. 
+
+The macro tests if the expression is false. If it is, a fatal error is detected and the application hangs up. If T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-D\-E\-F\-I\-N\-E\-\_\-\-A\-S\-S\-E\-R\-T\-\_\-\-M\-A\-C\-R\-O is defined, a unit test version of the macro is used, to allow execution of further tests after a false expression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to evaluate and supposed to be nonzero. \\
+\hline
+\end{DoxyParams}
+\hypertarget{compiler_8h_a53290ac2df2384738b8769c76622f803}{\index{compiler.\-h@{compiler.\-h}!barrier@{barrier}}
+\index{barrier@{barrier}!compiler.h@{compiler.\-h}}
+\subsubsection[{barrier}]{\setlength{\rightskip}{0pt plus 5cm}\#define barrier(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~asm (\char`\"{}\char`\"{})}}\label{compiler_8h_a53290ac2df2384738b8769c76622f803}
+
+
+Memory barrier. 
+
+\hypertarget{compiler_8h_abd2fa7b756342ae251e3a7a66670c2fe}{\index{compiler.\-h@{compiler.\-h}!L\-S\-B@{L\-S\-B}}
+\index{L\-S\-B@{L\-S\-B}!compiler.h@{compiler.\-h}}
+\subsubsection[{L\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-S\-B(
+\begin{DoxyParamCaption}
+\item[{}]{u16}
+\end{DoxyParamCaption}
+)~(((uint8\-\_\-t$\ast$ )\&u16)\mbox{[}0\mbox{]})}}\label{compiler_8h_abd2fa7b756342ae251e3a7a66670c2fe}
+\hypertarget{compiler_8h_abee1b74eceef5a0cf26efbf3ff87ccbf}{\index{compiler.\-h@{compiler.\-h}!M\-S\-B@{M\-S\-B}}
+\index{M\-S\-B@{M\-S\-B}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-B(
+\begin{DoxyParamCaption}
+\item[{}]{u16}
+\end{DoxyParamCaption}
+)~(((uint8\-\_\-t$\ast$ )\&u16)\mbox{[}1\mbox{]})}}\label{compiler_8h_abee1b74eceef5a0cf26efbf3ff87ccbf}
+\hypertarget{compiler_8h_ada67c62b1c57e07efa04431bc40b9238}{\index{compiler.\-h@{compiler.\-h}!U\-N\-U\-S\-E\-D@{U\-N\-U\-S\-E\-D}}
+\index{U\-N\-U\-S\-E\-D@{U\-N\-U\-S\-E\-D}!compiler.h@{compiler.\-h}}
+\subsubsection[{U\-N\-U\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-N\-U\-S\-E\-D(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~(void)(v)}}\label{compiler_8h_ada67c62b1c57e07efa04431bc40b9238}
+
+
+Marking {\itshape v} as a unused parameter or value. 
+
+\hypertarget{compiler_8h_a417dba7f63dde98dbebd6336d8af9d91}{\index{compiler.\-h@{compiler.\-h}!unused@{unused}}
+\index{unused@{unused}!compiler.h@{compiler.\-h}}
+\subsubsection[{unused}]{\setlength{\rightskip}{0pt plus 5cm}\#define unused(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~do \{ (void)(v); \} while(0)}}\label{compiler_8h_a417dba7f63dde98dbebd6336d8af9d91}
+
+
+Marking {\itshape v} as a unused parameter or value. 
+
