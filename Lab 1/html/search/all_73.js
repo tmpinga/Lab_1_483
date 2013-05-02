@@ -48,6 +48,7 @@ var searchData=
   ['sensors_5fxplained_5finertial_5fa1',['SENSORS_XPLAINED_INERTIAL_A1',['../group__group__common__boards.html#ga7796d1fa6e31b50714c391877e095801',1,'board.h']]],
   ['sensors_5fxplained_5flightprox_5f1',['SENSORS_XPLAINED_LIGHTPROX_1',['../group__group__common__boards.html#ga0a1006037bf18d016accfdea4a1105ae',1,'board.h']]],
   ['sensors_5fxplained_5fpressure_5f1',['SENSORS_XPLAINED_PRESSURE_1',['../group__group__common__boards.html#ga6d24ad0b78a00ebea03fc2b263e0735b',1,'board.h']]],
+  ['ser',['ser',['../namespace_lab1__483__pyinterface.html#a7fdd90e0492c95af6bb2d874a5cc4a7e',1,'Lab1_483_pyinterface']]],
   ['set_5floc',['SET_LOC',['../group__assembler__group.html#ga3a8bd27aec4611e3c0d1168f092272a5',1,'assembler.h']]],
   ['sig_5foutput_5fcompare1a',['SIG_OUTPUT_COMPARE1A',['../port_8c.html#aab4625a488c36c904d1a725a531f3157',1,'port.c']]],
   ['simulator_5fxmega_5fa1',['SIMULATOR_XMEGA_A1',['../group__group__common__boards.html#ga1c9dfe8403ed817c13fc6031956b1635',1,'board.h']]],

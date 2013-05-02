@@ -1,0 +1,58 @@
+\hypertarget{_lab1__483__pyinterface_8py}{\section{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab1\-\_\-483\-\_\-pyinterface.py File Reference}
+\label{_lab1__483__pyinterface_8py}\index{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab1\-\_\-483\-\_\-pyinterface.\-py@{Desktop/\-Git Rep/\-Lab1\-\_\-483/\-Lab1\-\_\-483\-\_\-pyinterface.\-py}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_lab1__483__pyinterface}{Lab1\-\_\-483\-\_\-pyinterface}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_lab1__483__pyinterface_a75a261f4a81e84215ecdc8a9cba9c2d6}{display\-Menu}
+\begin{DoxyCompactList}\small\item\em Menu Display function. \end{DoxyCompactList}\item 
+def \hyperlink{namespace_lab1__483__pyinterface_a673afbf98587b2487210cd7db0bcb2f5}{puts}
+\begin{DoxyCompactList}\small\item\em Put String to Serial Port. \end{DoxyCompactList}\item 
+def \hyperlink{namespace_lab1__483__pyinterface_acf1b33ef7c2c2a6e7950463bd28fa7de}{process\-Selection}
+\begin{DoxyCompactList}\small\item\em Process User Selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a92d3a987526d8683f6eb098bc044694c}{p} optparse.\-Option\-Parser()
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a6a30da6629d5b550c2025d3788d49cb9}{action} \char`\"{}store\char`\"{}
+\begin{DoxyCompactList}\small\item\em add options here port identifier for the P\-C host \end{DoxyCompactList}\item 
+string \hyperlink{namespace_lab1__483__pyinterface_acce15679d830831b0bbe8ebc2a60b2ca}{type} \char`\"{}string\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a66d4da94e0e4f717ff3e7f23c53f7c2d}{dest} \char`\"{}port\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_abcce2312b2278db095fe85eb2260cb84}{help} \char`\"{}port\-: C\-O\-M1, \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} (/dev/tty.\-usbserial-\/A20e1mk3)\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a7f4648aa9e6e34986cab1da2a58baf0a}{metavar} \char`\"{} P\-O\-R\-T\char`\"{}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a7a829e6fd74e94e0edf10550470d844c}{rate} 9600
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a493b57f443cc38b3d3df9c1e584d9d82}{timeout} 10
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_ab8da723c3b7bcac2541f0d4a6c8d3c0d}{logfile} \char`\"{}N\-U\-L\-L\char`\"{}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a0b2caeb4b6f130be43e5a2f0267dd453}{verbose} 0
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a67d4d94f824d1bec4405ed3b46596d5b}{bail} raw\-\_\-input(\char`\"{}\textbackslash{}n\-These are your settings, continue (y/n)\-: \char`\"{})
+\begin{DoxyCompactList}\small\item\em print a banner, then config options, allow for bail out before continuing setup a menu print it out, then take input from the keyboard (raw-\/input) and send it over the serial port Main \end{DoxyCompactList}\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a85d897846bb64fe74a8ce36c2365e3b8}{f} open(opt.\-logfile, \char`\"{}w+\char`\"{})
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a7fdd90e0492c95af6bb2d874a5cc4a7e}{ser} serial.\-Serial(port=opt.\-port, baudrate=opt.\-rate, timeout=opt.\-timeout)
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_ab649e04043fc82550811732da774d2cc}{text} ser.\-read(1)
+\item 
+list \hyperlink{namespace_lab1__483__pyinterface_ad668d4209789f3d31fa33f9d7c6ba43e}{menu} \mbox{[}'\mbox{[}D\mbox{]}isplay a message','\mbox{[}S\mbox{]}top', '\mbox{[}R\mbox{]}estart','\mbox{[}Q\mbox{]}uit'\mbox{]}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a3bb13bb432a56b973125d7138b68206d}{done} 0
+\begin{DoxyCompactList}\small\item\em when here the code calls display menu then processes selection, looking for \char`\"{}done\char`\"{} flag when the \char`\"{}quit\char`\"{} item is selected, after which we clean up and exit \end{DoxyCompactList}\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_acb0104594e2a37355704eb5ce2484ec1}{cmd} display\-Menu(menu)
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_af6f11e0c384f23b152f9c45e107496ec}{now} datetime.\-datetime.\-now()
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a5c342423791b46676acca38d824f1ea3}{t} now.\-ctime()
+\end{DoxyCompactItemize}

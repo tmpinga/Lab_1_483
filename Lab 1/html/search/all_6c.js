@@ -1,6 +1,8 @@
 var searchData=
 [
   ['l',['L',['../group__assembler__group.html#ga8e298c540513429b516bba4896bc2e6d',1,'assembler.h']]],
+  ['lab1_5f483_5fpyinterface',['Lab1_483_pyinterface',['../namespace_lab1__483__pyinterface.html',1,'']]],
+  ['lab1_5f483_5fpyinterface_2epy',['Lab1_483_pyinterface.py',['../_lab1__483__pyinterface_8py.html',1,'']]],
   ['ld_5faddr',['ld_addr',['../gas_8h.html#adb47a30becc9e0b6421042ea82a11913',1,'gas.h']]],
   ['led_5ftest500_5fmillisecond_5ftoggle',['led_test500_MILLISECOND_TOGGLE',['../main_8c.html#ab1e2986d99199637854117c6efe881c9',1,'main.c']]],
   ['led_5ftestled_5ftask_5fpriority',['led_testLED_TASK_PRIORITY',['../main_8c.html#a74ad86ee71abcddfb786048b51deb510',1,'main.c']]],
@@ -18,5 +20,6 @@ var searchData=
   ['listlist_5fis_5finitialised',['listLIST_IS_INITIALISED',['../list_8h.html#a7e17f81438dd0bd705714267a611ff28',1,'list.h']]],
   ['listset_5flist_5fitem_5fowner',['listSET_LIST_ITEM_OWNER',['../list_8h.html#acc01a08e534b54fe438847ef02e5060a',1,'list.h']]],
   ['listset_5flist_5fitem_5fvalue',['listSET_LIST_ITEM_VALUE',['../list_8h.html#a83e95e61652f032fdc26aa622f5e2610',1,'list.h']]],
+  ['logfile',['logfile',['../namespace_lab1__483__pyinterface.html#ab8da723c3b7bcac2541f0d4a6c8d3c0d',1,'Lab1_483_pyinterface']]],
   ['lsb',['LSB',['../compiler_8h.html#abd2fa7b756342ae251e3a7a66670c2fe',1,'compiler.h']]]
 ];

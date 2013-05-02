@@ -23,6 +23,8 @@ var searchData=
   ['mega_5fxx_5fun0',['MEGA_XX_UN0',['../group__mega__part__macros__group.html#gae1703e1537f2cbb10b4a8992c8b7b70b',1,'parts.h']]],
   ['mega_5fxx_5fun1',['MEGA_XX_UN1',['../group__mega__part__macros__group.html#gaad35e34280ef078dec0cc18c3ea6d3f6',1,'parts.h']]],
   ['mega_5fxx_5fun2',['MEGA_XX_UN2',['../group__mega__part__macros__group.html#ga5f4566d4ddaa3cee92d4c78162594f2d',1,'parts.h']]],
+  ['menu',['menu',['../namespace_lab1__483__pyinterface.html#ad668d4209789f3d31fa33f9d7c6ba43e',1,'Lab1_483_pyinterface']]],
+  ['metavar',['metavar',['../namespace_lab1__483__pyinterface.html#a7f4648aa9e6e34986cab1da2a58baf0a',1,'Lab1_483_pyinterface']]],
   ['mpu_5fwrappers_2eh',['mpu_wrappers.h',['../mpu__wrappers_8h.html',1,'']]],
   ['mpu_5fwrappers_5fincluded_5ffrom_5fapi_5ffile',['MPU_WRAPPERS_INCLUDED_FROM_API_FILE',['../heap__2_8c.html#ab622d8c674f2a417a666a7ed89109e79',1,'MPU_WRAPPERS_INCLUDED_FROM_API_FILE():&#160;heap_2.c'],['../queue_8c.html#ab622d8c674f2a417a666a7ed89109e79',1,'MPU_WRAPPERS_INCLUDED_FROM_API_FILE():&#160;queue.c'],['../tasks_8c.html#ab622d8c674f2a417a666a7ed89109e79',1,'MPU_WRAPPERS_INCLUDED_FROM_API_FILE():&#160;tasks.c'],['../timers_8c.html#ab622d8c674f2a417a666a7ed89109e79',1,'MPU_WRAPPERS_INCLUDED_FROM_API_FILE():&#160;timers.c']]],
   ['msb',['MSB',['../compiler_8h.html#abee1b74eceef5a0cf26efbf3ff87ccbf',1,'compiler.h']]]

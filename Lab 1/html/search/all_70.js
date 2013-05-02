@@ -1,6 +1,7 @@
 var searchData=
 [
   ['program_20memory',['Program memory',['../group__group__mega__utils__progmem.html',1,'']]],
+  ['p',['p',['../namespace_lab1__483__pyinterface.html#a92d3a987526d8683f6eb098bc044694c',1,'Lab1_483_pyinterface']]],
   ['partest_2eh',['partest.h',['../partest_8h.html',1,'']]],
   ['parts_2eh',['parts.h',['../parts_8h.html',1,'']]],
   ['partstdefault_5fport_5faddress',['partstDEFAULT_PORT_ADDRESS',['../partest_8h.html#a386edb94759905da42ff0449daea50c6',1,'partest.h']]],
@@ -62,6 +63,7 @@ var searchData=
   ['portyield_5fwithin_5fapi',['portYIELD_WITHIN_API',['../_free_r_t_o_s_8h.html#af4484fc07631a16e45ac5f29a3f0556e',1,'FreeRTOS.h']]],
   ['privileged_5fdata',['PRIVILEGED_DATA',['../mpu__wrappers_8h.html#a56a0b54ca924c56d192d4389ba585ed5',1,'mpu_wrappers.h']]],
   ['privileged_5ffunction',['PRIVILEGED_FUNCTION',['../mpu__wrappers_8h.html#a4785c4f4a8c04b835139dcc2a6682078',1,'mpu_wrappers.h']]],
+  ['processselection',['processSelection',['../namespace_lab1__483__pyinterface.html#acf1b33ef7c2c2a6e7950463bd28fa7de',1,'Lab1_483_pyinterface']]],
   ['progmem_2eh',['progmem.h',['../progmem_8h.html',1,'']]],
   ['projdefs_2eh',['projdefs.h',['../projdefs_8h.html',1,'']]],
   ['prvaddtasktoreadyqueue',['prvAddTaskToReadyQueue',['../tasks_8c.html#a31ea333244a185bf0287df8b847d3880',1,'tasks.c']]],
@@ -72,6 +74,7 @@ var searchData=
   ['prvlockqueue',['prvLockQueue',['../queue_8c.html#ae4efd14c0f4dee7f189ef2e4d9ce1f1b',1,'queue.c']]],
   ['public_5ffunction',['PUBLIC_FUNCTION',['../group__assembler__group.html#gae2b2aca7cb222177274d51289b51228f',1,'assembler.h']]],
   ['public_5ffunction_5fsegment',['PUBLIC_FUNCTION_SEGMENT',['../gas_8h.html#a21400c6e118a20b3b7881ae06fcc6391',1,'gas.h']]],
+  ['puts',['puts',['../namespace_lab1__483__pyinterface.html#a673afbf98587b2487210cd7db0bcb2f5',1,'Lab1_483_pyinterface']]],
   ['puxstackbuffer',['puxStackBuffer',['../structx_t_a_s_k___p_a_r_a_m_t_e_r_s.html#a5db00ede8faab54ea3aa065251c8e37b',1,'xTASK_PARAMTERS']]],
   ['pvbaseaddress',['pvBaseAddress',['../structx_m_e_m_o_r_y___r_e_g_i_o_n.html#a5c540d9e8ba79b50b9600f7225d41268',1,'xMEMORY_REGION']]],
   ['pvcontainer',['pvContainer',['../structx_l_i_s_t___i_t_e_m.html#a96701cdfbb91bd7b690f188d03bf03b1',1,'xLIST_ITEM']]],

@@ -2,6 +2,7 @@ var searchData=
 [
   ['vapplicationstackoverflowhook',['vApplicationStackOverflowHook',['../tasks_8c.html#af82984987d75dcade423623c8f343413',1,'tasks.c']]],
   ['vapplicationtickhook',['vApplicationTickHook',['../tasks_8c.html#a9ca051aa77e17583aa5a85d5de5c199a',1,'tasks.c']]],
+  ['verbose',['verbose',['../namespace_lab1__483__pyinterface.html#a0b2caeb4b6f130be43e5a2f0267dd453',1,'Lab1_483_pyinterface']]],
   ['vflashled500ms',['vFlashLed500ms',['../main_8c.html#a41f98f48a047281a612f721bdf972098',1,'main.c']]],
   ['vlistinitialise',['vListInitialise',['../list_8c.html#acc831631f04ca3f6fef79b0175f6d6e1',1,'vListInitialise(xList *pxList):&#160;list.c'],['../list_8h.html#acc831631f04ca3f6fef79b0175f6d6e1',1,'vListInitialise(xList *pxList):&#160;list.c']]],
   ['vlistinitialiseitem',['vListInitialiseItem',['../list_8c.html#aa0c6c2804f1673b95f781a795ebf96d8',1,'vListInitialiseItem(xListItem *pxItem):&#160;list.c'],['../list_8h.html#aa0c6c2804f1673b95f781a795ebf96d8',1,'vListInitialiseItem(xListItem *pxItem):&#160;list.c']]],

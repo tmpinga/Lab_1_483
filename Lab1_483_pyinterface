@@ -22,10 +22,13 @@ import datetime
 
 # Functions here
 ##############################################################################
-# Menu Display function
+## Menu Display function
 #
 # Function displays the menu to user, then tests user input for validity
 #
+def func():
+    pass
+  
 def displayMenu(menu):
   for item in menu:
     print '%s' % item
@@ -35,10 +38,13 @@ def displayMenu(menu):
 ##############################################################################
 
 ##############################################################################
-# Put String to Serial Port
+## Put String to Serial Port
 #
 # Function sends character string to serial port
 #
+def func():
+    pass
+  
 def puts(s):
   for c in list(str(s)):
     ser.write(c)
@@ -52,7 +58,7 @@ def puts(s):
 #
 def processSelection(s):
   text = ''
-  # D = D for display message
+  ## D = D for display message
   if s == 'D':
     print "Sending Display a message command\t"
     ser.write('D')
@@ -64,21 +70,21 @@ def processSelection(s):
     else:
       print '%s' % msg
 
-  # S = Stop - Red LED should turn off and amber should flash at slower rate
+  ## S = Stop - Red LED should turn off and amber should flash at slower rate
   elif s == 'S':
     print "Sending Stop command\t" 
     ser.write('S')
     text = ser.read(1)
     print "Received %s from target\n" % text
 
-  # R - Restart - Amber LED should turn off and red should restart	
+  ## R - Restart - Amber LED should turn off and red should restart	
   elif s == 'R':
     print "Sending Restart Command\t"
     ser.write('R')
     text = ser.read(1)
     print "Received %s from target\n" % text
 
-  # Q - quit - exit the program on each side	
+  ## Q - quit - exit the program on each side	
   elif s == 'Q':
     print "Sending Quit Command\t"
     ser.write('Q')
@@ -86,7 +92,7 @@ def processSelection(s):
     print "Received %s from target\n" % text
     return 1
 
-  # selection not valid - 
+  ## selection not valid - 
   else:
     print "\nInvalid selection %s, try again.\n" % s
     #return displayMenu(menu)
@@ -237,8 +243,5 @@ else:
   print "Nothing to do, but quit"
   sys.exit(0)
   
-############################################################
-# This is a piece of code to help doxygen document the code
-def func():
-    pass
+
 # end of file

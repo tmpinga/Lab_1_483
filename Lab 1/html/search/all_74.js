@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t',['t',['../port_8c.html#ac0f94870d16213390476789a52c8af0f',1,'port.c']]],
+  ['t',['t',['../namespace_lab1__483__pyinterface.html#a5c342423791b46676acca38d824f1ea3',1,'Lab1_483_pyinterface.t()'],['../port_8c.html#ac0f94870d16213390476789a52c8af0f',1,'t():&#160;port.c']]],
   ['task_2eh',['task.h',['../task_8h.html',1,'']]],
   ['taskdisable_5finterrupts',['taskDISABLE_INTERRUPTS',['../task_8h.html#aa455a648c2224964ee57758b8794198e',1,'taskDISABLE_INTERRUPTS():&#160;task.h'],['../task_d_i_s_a_b_l_e__i_n_t_e_r_r_u_p_t_s.html',1,'(Global Namespace)']]],
   ['taskenable_5finterrupts',['taskENABLE_INTERRUPTS',['../task_8h.html#a04361ba499e91eb35324e4cba6feea17',1,'taskENABLE_INTERRUPTS():&#160;task.h'],['../task_e_n_a_b_l_e__i_n_t_e_r_r_u_p_t_s.html',1,'(Global Namespace)']]],
@@ -13,7 +13,9 @@ var searchData=
   ['taskscheduler_5fsuspended',['taskSCHEDULER_SUSPENDED',['../task_8h.html#a0cad071ca127a35df93166e9ed5b6ada',1,'task.h']]],
   ['tasksecond_5fcheck_5ffor_5fstack_5foverflow',['taskSECOND_CHECK_FOR_STACK_OVERFLOW',['../_stack_macros_8h.html#a399b5dd158752a054edab55d5a6fd0b1',1,'StackMacros.h']]],
   ['taskyield',['taskYIELD',['../task_8h.html#a767e474430db1e60056e9678763f9202',1,'taskYIELD():&#160;task.h'],['../task_y_i_e_l_d.html',1,'(Global Namespace)']]],
+  ['text',['text',['../namespace_lab1__483__pyinterface.html#ab649e04043fc82550811732da774d2cc',1,'Lab1_483_pyinterface']]],
   ['text_5fsection',['TEXT_SECTION',['../group__assembler__group.html#ga8e8471b5cb4a0e8bc8cefb35cc8ebb3d',1,'assembler.h']]],
+  ['timeout',['timeout',['../namespace_lab1__483__pyinterface.html#a493b57f443cc38b3d3df9c1e584d9d82',1,'Lab1_483_pyinterface']]],
   ['timers_2ec',['timers.c',['../timers_8c.html',1,'']]],
   ['timers_2eh',['timers.h',['../timers_8h.html',1,'']]],
   ['tiny',['TINY',['../group__tiny__part__macros__group.html#gacf1c38f71f39386356edb151a131ad11',1,'parts.h']]],
@@ -77,5 +79,6 @@ var searchData=
   ['tskstack_5ffill_5fbyte',['tskSTACK_FILL_BYTE',['../tasks_8c.html#ad3b1c99066f14855be098ccca1685fac',1,'tasks.c']]],
   ['tsksuspended_5fchar',['tskSUSPENDED_CHAR',['../tasks_8c.html#a3613b4b66406c8f6cc73e5c3e9f208db',1,'tasks.c']]],
   ['tsktaskcontrolblock',['tskTaskControlBlock',['../structtsk_task_control_block.html',1,'']]],
-  ['tsktcb',['tskTCB',['../port_8c.html#aa52a9e93754db09f2c0d7c4029727033',1,'tskTCB():&#160;port.c'],['../tasks_8c.html#a1e66c51944fbc63a4c7682217174b241',1,'tskTCB():&#160;tasks.c']]]
+  ['tsktcb',['tskTCB',['../port_8c.html#aa52a9e93754db09f2c0d7c4029727033',1,'tskTCB():&#160;port.c'],['../tasks_8c.html#a1e66c51944fbc63a4c7682217174b241',1,'tskTCB():&#160;tasks.c']]],
+  ['type',['type',['../namespace_lab1__483__pyinterface.html#acce15679d830831b0bbe8ebc2a60b2ca',1,'Lab1_483_pyinterface']]]
 ];

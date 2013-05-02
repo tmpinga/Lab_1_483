@@ -1,0 +1,161 @@
+\hypertarget{namespace_lab1__483__pyinterface}{\section{Lab1\-\_\-483\-\_\-pyinterface Namespace Reference}
+\label{namespace_lab1__483__pyinterface}\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_lab1__483__pyinterface_a75a261f4a81e84215ecdc8a9cba9c2d6}{display\-Menu}
+\begin{DoxyCompactList}\small\item\em Menu Display function. \end{DoxyCompactList}\item 
+def \hyperlink{namespace_lab1__483__pyinterface_a673afbf98587b2487210cd7db0bcb2f5}{puts}
+\begin{DoxyCompactList}\small\item\em Put String to Serial Port. \end{DoxyCompactList}\item 
+def \hyperlink{namespace_lab1__483__pyinterface_acf1b33ef7c2c2a6e7950463bd28fa7de}{process\-Selection}
+\begin{DoxyCompactList}\small\item\em Process User Selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a92d3a987526d8683f6eb098bc044694c}{p} optparse.\-Option\-Parser()
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a6a30da6629d5b550c2025d3788d49cb9}{action} \char`\"{}store\char`\"{}
+\begin{DoxyCompactList}\small\item\em add options here port identifier for the P\-C host \end{DoxyCompactList}\item 
+string \hyperlink{namespace_lab1__483__pyinterface_acce15679d830831b0bbe8ebc2a60b2ca}{type} \char`\"{}string\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a66d4da94e0e4f717ff3e7f23c53f7c2d}{dest} \char`\"{}port\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_abcce2312b2278db095fe85eb2260cb84}{help} \char`\"{}port\-: C\-O\-M1, \hyperlink{gas_8h_a8cc72c7acb2e8c5a34a460a505fece93}{name} (/dev/tty.\-usbserial-\/A20e1mk3)\char`\"{}
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_a7f4648aa9e6e34986cab1da2a58baf0a}{metavar} \char`\"{} P\-O\-R\-T\char`\"{}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a7a829e6fd74e94e0edf10550470d844c}{rate} 9600
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a493b57f443cc38b3d3df9c1e584d9d82}{timeout} 10
+\item 
+string \hyperlink{namespace_lab1__483__pyinterface_ab8da723c3b7bcac2541f0d4a6c8d3c0d}{logfile} \char`\"{}N\-U\-L\-L\char`\"{}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a0b2caeb4b6f130be43e5a2f0267dd453}{verbose} 0
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a67d4d94f824d1bec4405ed3b46596d5b}{bail} raw\-\_\-input(\char`\"{}\textbackslash{}n\-These are your settings, continue (y/n)\-: \char`\"{})
+\begin{DoxyCompactList}\small\item\em print a banner, then config options, allow for bail out before continuing setup a menu print it out, then take input from the keyboard (raw-\/input) and send it over the serial port Main \end{DoxyCompactList}\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a85d897846bb64fe74a8ce36c2365e3b8}{f} open(opt.\-logfile, \char`\"{}w+\char`\"{})
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a7fdd90e0492c95af6bb2d874a5cc4a7e}{ser} serial.\-Serial(port=opt.\-port, baudrate=opt.\-rate, \hyperlink{namespace_lab1__483__pyinterface_a493b57f443cc38b3d3df9c1e584d9d82}{timeout}=opt.\-timeout)
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_ab649e04043fc82550811732da774d2cc}{text} ser.\-read(1)
+\item 
+list \hyperlink{namespace_lab1__483__pyinterface_ad668d4209789f3d31fa33f9d7c6ba43e}{menu} \mbox{[}'\mbox{[}D\mbox{]}isplay a message','\mbox{[}S\mbox{]}top', '\mbox{[}R\mbox{]}estart','\mbox{[}Q\mbox{]}uit'\mbox{]}
+\item 
+int \hyperlink{namespace_lab1__483__pyinterface_a3bb13bb432a56b973125d7138b68206d}{done} 0
+\begin{DoxyCompactList}\small\item\em when here the code calls display menu then processes selection, looking for \char`\"{}done\char`\"{} flag when the \char`\"{}quit\char`\"{} item is selected, after which we clean up and exit \end{DoxyCompactList}\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_acb0104594e2a37355704eb5ce2484ec1}{cmd} \hyperlink{namespace_lab1__483__pyinterface_a75a261f4a81e84215ecdc8a9cba9c2d6}{display\-Menu}(\hyperlink{namespace_lab1__483__pyinterface_ad668d4209789f3d31fa33f9d7c6ba43e}{menu})
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_af6f11e0c384f23b152f9c45e107496ec}{now} datetime.\-datetime.\-now()
+\item 
+tuple \hyperlink{namespace_lab1__483__pyinterface_a5c342423791b46676acca38d824f1ea3}{t} now.\-ctime()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_lab1__483__pyinterface_a75a261f4a81e84215ecdc8a9cba9c2d6}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!display\-Menu@{display\-Menu}}
+\index{display\-Menu@{display\-Menu}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{display\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}def Lab1\-\_\-483\-\_\-pyinterface.\-display\-Menu (
+\begin{DoxyParamCaption}
+\item[{}]{menu}
+\end{DoxyParamCaption}
+)}}\label{namespace_lab1__483__pyinterface_a75a261f4a81e84215ecdc8a9cba9c2d6}
+
+
+Menu Display function. 
+
+Function displays the menu to user, then tests user input for validity \hypertarget{namespace_lab1__483__pyinterface_acf1b33ef7c2c2a6e7950463bd28fa7de}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!process\-Selection@{process\-Selection}}
+\index{process\-Selection@{process\-Selection}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{process\-Selection}]{\setlength{\rightskip}{0pt plus 5cm}def Lab1\-\_\-483\-\_\-pyinterface.\-process\-Selection (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespace_lab1__483__pyinterface_acf1b33ef7c2c2a6e7950463bd28fa7de}
+
+
+Process User Selection. 
+
+Function processes user selection Selection can be any single character, allowing for easy expansion \hypertarget{namespace_lab1__483__pyinterface_a673afbf98587b2487210cd7db0bcb2f5}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!puts@{puts}}
+\index{puts@{puts}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{puts}]{\setlength{\rightskip}{0pt plus 5cm}def Lab1\-\_\-483\-\_\-pyinterface.\-puts (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespace_lab1__483__pyinterface_a673afbf98587b2487210cd7db0bcb2f5}
+
+
+Put String to Serial Port. 
+
+Function sends character string to serial port 
+
+\subsection{Variable Documentation}
+\hypertarget{namespace_lab1__483__pyinterface_a6a30da6629d5b550c2025d3788d49cb9}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!action@{action}}
+\index{action@{action}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}string action \char`\"{}store\char`\"{}}}\label{namespace_lab1__483__pyinterface_a6a30da6629d5b550c2025d3788d49cb9}
+
+
+add options here port identifier for the P\-C host 
+
+\hypertarget{namespace_lab1__483__pyinterface_a67d4d94f824d1bec4405ed3b46596d5b}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!bail@{bail}}
+\index{bail@{bail}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{bail}]{\setlength{\rightskip}{0pt plus 5cm}tuple bail raw\-\_\-input(\char`\"{}\textbackslash{}n\-These are your settings, continue (y/n)\-: \char`\"{})}}\label{namespace_lab1__483__pyinterface_a67d4d94f824d1bec4405ed3b46596d5b}
+
+
+print a banner, then config options, allow for bail out before continuing setup a menu print it out, then take input from the keyboard (raw-\/input) and send it over the serial port Main 
+
+\hypertarget{namespace_lab1__483__pyinterface_acb0104594e2a37355704eb5ce2484ec1}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!cmd@{cmd}}
+\index{cmd@{cmd}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{cmd}]{\setlength{\rightskip}{0pt plus 5cm}tuple cmd {\bf display\-Menu}({\bf menu})}}\label{namespace_lab1__483__pyinterface_acb0104594e2a37355704eb5ce2484ec1}
+\hypertarget{namespace_lab1__483__pyinterface_a66d4da94e0e4f717ff3e7f23c53f7c2d}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!dest@{dest}}
+\index{dest@{dest}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{dest}]{\setlength{\rightskip}{0pt plus 5cm}string dest \char`\"{}port\char`\"{}}}\label{namespace_lab1__483__pyinterface_a66d4da94e0e4f717ff3e7f23c53f7c2d}
+\hypertarget{namespace_lab1__483__pyinterface_a3bb13bb432a56b973125d7138b68206d}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!done@{done}}
+\index{done@{done}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{done}]{\setlength{\rightskip}{0pt plus 5cm}tuple done 0}}\label{namespace_lab1__483__pyinterface_a3bb13bb432a56b973125d7138b68206d}
+
+
+when here the code calls display menu then processes selection, looking for \char`\"{}done\char`\"{} flag when the \char`\"{}quit\char`\"{} item is selected, after which we clean up and exit 
+
+\hypertarget{namespace_lab1__483__pyinterface_a85d897846bb64fe74a8ce36c2365e3b8}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!f@{f}}
+\index{f@{f}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple f open(opt.\-logfile, \char`\"{}w+\char`\"{})}}\label{namespace_lab1__483__pyinterface_a85d897846bb64fe74a8ce36c2365e3b8}
+\hypertarget{namespace_lab1__483__pyinterface_abcce2312b2278db095fe85eb2260cb84}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!help@{help}}
+\index{help@{help}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{help}]{\setlength{\rightskip}{0pt plus 5cm}string help \char`\"{}port\-: C\-O\-M1, {\bf name} (/dev/tty.\-usbserial-\/A20e1mk3)\char`\"{}}}\label{namespace_lab1__483__pyinterface_abcce2312b2278db095fe85eb2260cb84}
+\hypertarget{namespace_lab1__483__pyinterface_ab8da723c3b7bcac2541f0d4a6c8d3c0d}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!logfile@{logfile}}
+\index{logfile@{logfile}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{logfile}]{\setlength{\rightskip}{0pt plus 5cm}string logfile \char`\"{}N\-U\-L\-L\char`\"{}}}\label{namespace_lab1__483__pyinterface_ab8da723c3b7bcac2541f0d4a6c8d3c0d}
+\hypertarget{namespace_lab1__483__pyinterface_ad668d4209789f3d31fa33f9d7c6ba43e}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!menu@{menu}}
+\index{menu@{menu}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{menu}]{\setlength{\rightskip}{0pt plus 5cm}list menu \mbox{[}'\mbox{[}D\mbox{]}isplay a message','\mbox{[}S\mbox{]}top', '\mbox{[}R\mbox{]}estart','\mbox{[}Q\mbox{]}uit'\mbox{]}}}\label{namespace_lab1__483__pyinterface_ad668d4209789f3d31fa33f9d7c6ba43e}
+\hypertarget{namespace_lab1__483__pyinterface_a7f4648aa9e6e34986cab1da2a58baf0a}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!metavar@{metavar}}
+\index{metavar@{metavar}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{metavar}]{\setlength{\rightskip}{0pt plus 5cm}string metavar \char`\"{} P\-O\-R\-T\char`\"{}}}\label{namespace_lab1__483__pyinterface_a7f4648aa9e6e34986cab1da2a58baf0a}
+\hypertarget{namespace_lab1__483__pyinterface_af6f11e0c384f23b152f9c45e107496ec}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!now@{now}}
+\index{now@{now}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}tuple now datetime.\-datetime.\-now()}}\label{namespace_lab1__483__pyinterface_af6f11e0c384f23b152f9c45e107496ec}
+\hypertarget{namespace_lab1__483__pyinterface_a92d3a987526d8683f6eb098bc044694c}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!p@{p}}
+\index{p@{p}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}tuple p optparse.\-Option\-Parser()}}\label{namespace_lab1__483__pyinterface_a92d3a987526d8683f6eb098bc044694c}
+\hypertarget{namespace_lab1__483__pyinterface_a7a829e6fd74e94e0edf10550470d844c}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!rate@{rate}}
+\index{rate@{rate}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}int rate 9600}}\label{namespace_lab1__483__pyinterface_a7a829e6fd74e94e0edf10550470d844c}
+\hypertarget{namespace_lab1__483__pyinterface_a7fdd90e0492c95af6bb2d874a5cc4a7e}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!ser@{ser}}
+\index{ser@{ser}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{ser}]{\setlength{\rightskip}{0pt plus 5cm}tuple ser serial.\-Serial(port=opt.\-port, baudrate=opt.\-rate, {\bf timeout}=opt.\-timeout)}}\label{namespace_lab1__483__pyinterface_a7fdd90e0492c95af6bb2d874a5cc4a7e}
+\hypertarget{namespace_lab1__483__pyinterface_a5c342423791b46676acca38d824f1ea3}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!t@{t}}
+\index{t@{t}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}tuple t now.\-ctime()}}\label{namespace_lab1__483__pyinterface_a5c342423791b46676acca38d824f1ea3}
+\hypertarget{namespace_lab1__483__pyinterface_ab649e04043fc82550811732da774d2cc}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!text@{text}}
+\index{text@{text}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{text}]{\setlength{\rightskip}{0pt plus 5cm}tuple text ser.\-read(1)}}\label{namespace_lab1__483__pyinterface_ab649e04043fc82550811732da774d2cc}
+\hypertarget{namespace_lab1__483__pyinterface_a493b57f443cc38b3d3df9c1e584d9d82}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!timeout@{timeout}}
+\index{timeout@{timeout}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{timeout}]{\setlength{\rightskip}{0pt plus 5cm}int timeout 10}}\label{namespace_lab1__483__pyinterface_a493b57f443cc38b3d3df9c1e584d9d82}
+\hypertarget{namespace_lab1__483__pyinterface_acce15679d830831b0bbe8ebc2a60b2ca}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!type@{type}}
+\index{type@{type}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}string type \char`\"{}string\char`\"{}}}\label{namespace_lab1__483__pyinterface_acce15679d830831b0bbe8ebc2a60b2ca}
+\hypertarget{namespace_lab1__483__pyinterface_a0b2caeb4b6f130be43e5a2f0267dd453}{\index{Lab1\-\_\-483\-\_\-pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}!verbose@{verbose}}
+\index{verbose@{verbose}!Lab1_483_pyinterface@{Lab1\-\_\-483\-\_\-pyinterface}}
+\subsubsection[{verbose}]{\setlength{\rightskip}{0pt plus 5cm}int verbose 0}}\label{namespace_lab1__483__pyinterface_a0b2caeb4b6f130be43e5a2f0267dd453}
