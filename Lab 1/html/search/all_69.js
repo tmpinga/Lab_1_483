@@ -16,6 +16,7 @@ var searchData=
   ['include_5fxtaskresumefromisr',['INCLUDE_xTaskResumeFromISR',['../_free_r_t_o_s_8h.html#a85e3dae9f3daa26f24e679cb6793811e',1,'FreeRTOS.h']]],
   ['include_5fxtimergettimerdaemontaskhandle',['INCLUDE_xTimerGetTimerDaemonTaskHandle',['../_free_r_t_o_s_8h.html#a465e2b2f45096a6bf00ae036ce5dee5b',1,'FreeRTOS.h']]],
   ['init_2ec',['init.c',['../init_8c.html',1,'']]],
+  ['init_2ed',['init.d',['../init_8d.html',1,'']]],
   ['interrupt_2eh',['interrupt.h',['../interrupt_8h.html',1,'']]],
   ['interrupt_5favr8_2eh',['interrupt_avr8.h',['../interrupt__avr8_8h.html',1,'']]],
   ['irqflags_5ft',['irqflags_t',['../group__interrupt__group.html#ga9aa1f52defc97531b6343233abeea613',1,'interrupt_avr8.h']]],
